@@ -1,0 +1,41 @@
+{
+    "pages": [
+        "pages/advertising/advertising",
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/scroll_view/scroll_view",
+        "pages/loading/loading"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "食典录",
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "custom"
+    },
+    "tabBar": {
+        "color": "#707070",
+        "selectedColor": "#F26B3A",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "主页",
+                "iconPath": "images/tabber/homeitem.png",
+                "selectedIconPath": "images/tabber/homeselected.png"
+            },
+            {
+                "pagePath": "pages/loading/loading",
+                "text": "分类",
+                "iconPath": "images/tabber/classifyitem.png",
+                "selectedIconPath": "images/tabber/classifyitemselected.png"
+            },
+            {
+                "pagePath": "pages/logs/logs",
+                "text": "我的",
+                "iconPath": "images/tabber/checkeditem.png",
+                "selectedIconPath": "images/tabber/checkeditemselected.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

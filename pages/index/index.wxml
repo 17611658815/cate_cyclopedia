@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<header-nav navbar-data='{{nvabarData}}'></header-nav>
+<scroll-view class="container" scroll-y="true" style="height:{{scrollH}}px;background:#f8f8f8;margin-top:{{height*2 + 20}}px;" bindscrolltolower="onscrollBotm">
+        <view class='swipe-wrap'>
+            <image mode='aspectFill' src='../../images/img/b1.jpg'></image>
+        </view>
+        <view class="index-serch-box">
+            <view class="index-serch-con">
+                <navigator url='/pages/logs/logs'>
+                    <image class="index-serch-link-icon" src="../../images/icon/icon-serch.png"></image>
+                    <text class="index-serch-link-text">今天想吃点什么</text>
+                </navigator>
+            </view>
+        </view>
+        <view class='index-slogan'>做有灵魂的食物</view>
+        <view style="display:none">
+            <image wx:for="{{images}}" wx:key="id" id="{{item.id}}" src="{{item.thumb}}" bindload="onImageLoad"></image>
+        </view>
+        <view style="width:100%">
+            <view class="img_item">
+                <view wx:for="{{col1}}" wx:key="id">
+                    <image class='index_img_item' lazy-load='true' src="{{item.thumb}}" style="width:100%;height:{{item.height}}px"></image>
+                    <view class='index_img_title'>{{item.title}}</view>
+                </view>
+            </view>
+            <view class="img_item">
+                <view wx:for="{{col2}}" wx:key="id">
+                    <image class='index_img_item' lazy-load='true' src="{{item.thumb}}" style="width:100%;height:{{item.height}}px"></image>
+                    <view class='index_img_title'>{{item.title}}</view>
+                </view>
+            </view>
+        </view>
+        <import src="../../templates/loading/loading.wxml"></import>
+        <template is="loading" data wx:if='{{!off_on && page>1}}'></template> 
+</scroll-view>

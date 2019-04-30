@@ -1,0 +1,73 @@
+/**index.wxss**/
+.content {
+    width: 100%;
+    height: 86%; /*一定要设置高度*/
+    position: relative;
+    padding-bottom: 40rpx;
+    box-sizing: border-box;
+    background: #f8f8f8;
+}
+.orientation_region{
+    position: fixed;
+    top: 10rpx;
+    right: 10rpx;
+}
+.swipe-wrap{
+    width: 100%;
+    height: 240rpx
+}
+.swipe-wrap image{
+    width: 100%;
+    height: 240rpx
+}
+.index-serch-box{
+    width: 100%;
+    padding: 15rpx 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+.index-serch-con{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30rpx;
+    color:#000000;
+    padding: 25rpx 0;
+    background: white;
+}
+.index-serch-link-icon{
+    width: 32rpx;
+    height: 32rpx;
+    margin-right: 10rpx;
+    vertical-align: middle;
+}
+.index-slogan{
+    width: 100%;
+    background: #ffffff;
+    padding: 30rpx 0;
+    font-size: 25rpx;
+    text-align: center;
+    color: #e2e2e2;
+}
+
+.img_item {
+  width: 48%;
+  margin: 1%;
+  display: inline-block;
+  vertical-align: top;
+  background: #ffffff;
+}
+.index_img_item{
+    border-radius: 10rpx;
+}
+.index_img_title{
+    font-size: 25rpx;
+    color: #707070;
+    padding-bottom: 1%;
+}
+
+
+

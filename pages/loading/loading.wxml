@@ -1,0 +1,5 @@
+<import src="../../templates/loading/loading.wxml"></import>
+<header-nav navbar-data='{{nvabarData}}'></header-nav>
+<view class="container" class="container {{iphonex == true ?'isiphone':'noiphone'}}">
+    <template is="loading" data></template> 
+</view>

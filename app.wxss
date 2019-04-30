@@ -1,0 +1,24 @@
+/**app.wxss**/
+/* 
+    引入全局样式
+ */
+@import 'css/global.wxss';
+@import "templates/loading/loading.wxss";
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    background: #f8f8f8;
+}
+.isiphone{
+    margin-top: 220rpx;
+}
+.noiphone{
+    margin-top: 115rpx;
+}
+button::after{
+    border: none;
+}
+

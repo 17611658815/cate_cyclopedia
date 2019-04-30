@@ -1,0 +1,8 @@
+<template name="loading">
+    <view class="loading-box">
+        <view class="loading">
+            <view class="loading-item" wx:for="{{3}}"></view>
+        </view>
+        <!-- <view class="loading-text"></view> -->
+    </view>
+</template>

@@ -1,0 +1,59 @@
+/* pages/advertising/advertising.wxss */
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.adv1 {
+    width: 100%;
+    flex: 4;
+    position: relative;
+}
+
+.adv2 {
+    flex: 1;
+    background: white;
+}
+
+.adv-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.tiaoguo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25rpx;
+    background-color: wheat;
+    border-radius: 80rpx;
+    margin-left: 10rpx;
+    position: absolute;
+    z-index: 999;
+    right: 25rpx;
+    bottom: 25rpx;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+}
+
+button {
+    border-radius: 18rpx;
+    width: 220rpx;
+    background-color: #eecbad;
+    color: #8b5742;
+    margin-top: 38rpx;
+    font-size: 33rpx;
+}
+
+.text2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 23rpx;
+    font-size: 28rpx;
+}
