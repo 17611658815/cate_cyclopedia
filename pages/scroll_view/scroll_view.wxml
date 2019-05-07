@@ -1,5 +1,5 @@
 <header-nav navbar-data='{{nvabarData}}'></header-nav>
-<view class="container" tyle='margin-top:{{height*2 + 20}}px;'>
+<view class="container" style='margin-top:{{height*2 + 20}}px;'>
     <scroll-view class="content" scroll-into-view="{{toView}}" scroll-y="true" scroll-with-animation="true">
         <view wx:for='{{act_addList}}'>
             <view style='color:red' class='flop' data-pid="{{item.region}}" id="{{'toView'+item.region}}">{{item.region}}</view>

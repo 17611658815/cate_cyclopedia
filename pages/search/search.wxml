@@ -1,0 +1,14 @@
+<header-nav navbar-data='{{nvabarData}}'></header-nav>
+<view class='search_ctn' style='margin-top:{{height*2 + 20}}px;' catchtap='delSelect'>
+    <view class='search_input'>
+        <view class='search_input_cnt'>
+            <input type='text' bindinput='inputSearch' bindconfirm='gosearchMsg' data-q='{{inputVal}}' value='{{inputVal}}' placeholder='寻味美食 / 一触及达' placeholder-class='plhclass'></input>
+            <view>取消</view>
+        </view>
+        <view class='selectContent'>
+            <view class='search_input_slect' wx:for="{{searchResultDatas}}" wx:key='item'>
+                <searchHighlightTextView  class="result-item" datas='{{searchData[index]}}' catchtap='gosearchMsg' data-val='{{item}}' />
+            </view>
+        </view>
+    </view>
+</view>

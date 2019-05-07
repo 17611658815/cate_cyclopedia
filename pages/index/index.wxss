@@ -1,4 +1,5 @@
 /**index.wxss**/
+
 .content {
     width: 100%;
     height: 86%; /*一定要设置高度*/
@@ -47,15 +48,15 @@
 .index-slogan{
     width: 100%;
     background: #ffffff;
-    padding: 30rpx 0;
+    padding: 30rpx 0 20rpx 0;
     font-size: 25rpx;
     text-align: center;
     color: #e2e2e2;
 }
 
 .img_item {
-  width: 48%;
-  margin: 1%;
+  width: 46%;
+  margin:2%;
   display: inline-block;
   vertical-align: top;
   background: #ffffff;
@@ -63,11 +64,35 @@
 .index_img_item{
     border-radius: 10rpx;
 }
-.index_img_title{
-    font-size: 25rpx;
-    color: #707070;
-    padding-bottom: 1%;
+.img_container{
+    width: 95%;
+    margin: auto;
 }
+.index_img_title{
+    margin-bottom: 10rpx;
+}
+.index_img_title .index_img_title_item{
+    font-size: 28rpx;
+    font-weight: 500;
+    color: #333333;
+    border-radius: 0 0 10rpx 10rpx;
+    word-break:break-all;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    overflow:hidden;
+}
+.index_img_title_hot{
+    display: flex;
+}
+.index_img_title_hot view{
+    font-size: 23rpx;
+    color: #707070;
+    font-weight: 500;
+    margin-right: 20rpx;
+}
+
 
 
 

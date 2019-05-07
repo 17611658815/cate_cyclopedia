@@ -4,7 +4,10 @@
         "pages/index/index",
         "pages/logs/logs",
         "pages/scroll_view/scroll_view",
-        "pages/loading/loading"
+        "pages/classify/classify",
+        "pages/cateDetaile/cateDetaile",
+        "pages/search/search",
+        "pages/cateList/cateList"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -24,7 +27,7 @@
                 "selectedIconPath": "images/tabber/homeselected.png"
             },
             {
-                "pagePath": "pages/loading/loading",
+                "pagePath": "pages/classify/classify",
                 "text": "分类",
                 "iconPath": "images/tabber/classifyitem.png",
                 "selectedIconPath": "images/tabber/classifyitemselected.png"

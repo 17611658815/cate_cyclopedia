@@ -1,14 +1,17 @@
 const utils = require('../../utils/util.js')
+const app = getApp()
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
+        height:0,
         iphonex:false,
+        classlits:[],
         nvabarData: {
-            showCapsule: 1,
-            title: 'LOADING',
+            showCapsule: 0,
+            title: '菜谱分类',
         },
     },
 
@@ -16,14 +19,27 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        if (utils.isiPhoneX()) {
-            this.data.iphonex = utils.isiPhoneX()
-        }
+        this.loadList()
         this.setData({
-            iphonex: this.data.iphonex
+            height: app.globalData.height,
+        });
+        
+    },
+    loadList(){
+        let that = this,
+            param = new Object();
+            param.is_weapp = 1,
+            param.weapp_src ='xcf'
+        app.net.$Api.getclassList(param).then((res) => {
+            res.data.content.forEach(vla=>{
+                console.log(vla)
+            })
+            that.setData({
+                classlits: res.data.content
+            })
+           
         })
     },
-
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

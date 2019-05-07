@@ -1,0 +1,16 @@
+<import src="../../templates/loading/loading.wxml"></import>
+<header-nav navbar-data='{{nvabarData}}'></header-nav>
+<view  style='margin-top:{{height*2 + 20}}px;'>
+    <view class='clsaa_list_container' wx:for='{{classlits}}' wx:key='key'>
+        <view class='clsaa_list_title'>
+            {{item.title}}
+        </view>
+        <view class='clsaa_list_item_container'>
+            <view class='clsaa_list_item_icon' wx:for='{{item.entries}}' wx:for-item="twodata" wx:key='key' style="background-image: url('{{twodata.picurl}}'); background-size: 100% 100%;"> 
+                 <view class='clsaa_list_item_icon_title'>
+                    {{twodata.name}}
+                 </view>
+            </view>
+        </view>
+    </view>
+</view>

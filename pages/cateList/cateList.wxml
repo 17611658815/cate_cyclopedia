@@ -1,0 +1,5 @@
+<import src="../../templates/loading/loading.wxml"></import>
+<header-nav navbar-data='{{nvabarData}}'></header-nav>
+<view  style='margin-top:{{height*2 + 20}}px;'>
+    
+</view>

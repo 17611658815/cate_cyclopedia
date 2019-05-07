@@ -1,0 +1,67 @@
+/* pages/cateDetaile/cateDetaile.wxss */
+.cate_thumb{
+    width: 100%;
+}
+.cate_title{
+    width: 90%;
+    padding: 40rpx 0;
+    text-align: center;
+    margin: auto;
+    border-bottom: 1rpx solid #e2e2e2;
+}
+.cate_title_title{
+    font-size: 40rpx;
+}
+.cate_title_hot{
+    font-size: 25rpx;
+    margin-top: 30rpx;
+}
+.cate_title_hot text{
+    margin-right: 20rpx;
+}
+.cate_title_root{
+    margin-top: 30rpx;
+    font-size: 25rpx;
+    color: #707070;
+}
+.cate_foodmaterial{
+    width: 90%;
+    padding-bottom: 30rpx;
+    margin: auto;
+}
+.cate_fmt_title{
+    font-size: 36rpx;
+    font-weight: 600;
+    margin:40rpx 0;
+}
+.cate_fmt_item{
+    display: flex;
+}
+.cate_fmt_item view{
+    flex: 1;
+    font-size: 30rpx;
+    padding: 20rpx 0;
+    border-bottom: 1rpx solid #e2e2e2;
+}
+.orange{
+   color: #F26B3A;
+}
+.black{
+    color: #333333;
+}
+.cate_fmt_step_txt{
+    padding: 30rpx 0;
+    font-size: 36rpx;
+    font-weight: 600;
+}
+.cate_fmt_step image{
+    width: 100%;
+    border-radius: 10rpx;
+}
+.cate_fmt_step_textmsg{
+    width: 100%;
+    padding: 20rpx 0;
+    font-size: 30rpx;
+    line-height: 2;
+    border-bottom: 1rpx solid #e2e2e2;
+}

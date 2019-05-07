@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "header-nav": "../../components/headerNav/headerNav",
+        "searchHighlightTextView": "../../components/searchHighlightTextView/searchHighlightTextView"
+    }
+}

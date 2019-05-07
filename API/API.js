@@ -11,15 +11,27 @@ export const api = {
      */
 
     /**
-     * 主页视频列表
+     * 热门菜谱
      */
-    getHomeVideoList: function(paramObj) {
-        return Promise.get(Url.default.getHomeListUrl, paramObj);
+    getHomeList: function(paramObj) {
+        return Promise.get(Url.default.getHomeListUrl(paramObj), paramObj);
     },
     /**
-     * 测试接口数据
+     * 菜谱分类
      */
-    getdiseaselistList: function (paramObj) {
-        return Promise.get(Url.default.getdiseaselistUrl, paramObj);
+    getclassList: function (paramObj) {
+        return Promise.get(Url.default.classitemUrl(paramObj), paramObj);
+    },
+    /**
+     * 菜谱详情
+     */
+    getCatedetaile: function (paramObj) {
+        return Promise.get(Url.default.detailsUrl(paramObj), paramObj);
+    },
+    /**
+     * 搜索联想
+     */
+    searchSelect: function (paramObj) {
+        return Promise.get(Url.default.searchSelectUrl(paramObj), paramObj);
     },
 }

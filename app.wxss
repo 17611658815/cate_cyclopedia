@@ -12,13 +12,14 @@
     box-sizing: border-box;
     background: #f8f8f8;
 }
-.isiphone{
-    margin-top: 220rpx;
-}
-.noiphone{
-    margin-top: 115rpx;
-}
 button::after{
     border: none;
+}
+.reach_bottom{
+    text-align: center;
+    line-height: 80rpx;
+    font-size: 24rpx;
+    color: #626262;
+    background: #ffffff;
 }
 
