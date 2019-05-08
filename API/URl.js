@@ -17,5 +17,12 @@ export default class Url {
     static searchSelectUrl(data) {
         return Url.PATH + '/search/prefix_keyword_suggester.json?is_weapp=' + data.is_weapp + '&weapp_src=' + data.xcf + "&&mode=full" + "&q=" + data.q
     }; 
-
+    //热门搜索
+    static hotSearchUrl(data) {
+        return Url.PATH + '/search/keyword_hour.json?is_weapp=' + data.is_weapp + '&weapp_src=' + data.xcf;
+    }; 
+    //搜索详情
+    static searchDetaileUrl(data) {
+        return Url.PATH + '/search/universal_search.json?search_type=1001&is_weapp=' + data.is_weapp + '&weapp_src=' + data.xcf + "&offset=" + data.offset + '&limit=20' + "&q=" + data.q + "&order_by=" + data.order_by
+    }; 
 }

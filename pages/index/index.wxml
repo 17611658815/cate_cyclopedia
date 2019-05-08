@@ -46,7 +46,7 @@
                 </view>
             </view>
         </view>
-        <template is="loading" data wx:if='{{!off_on && page>=1}}'></template>
-        <view class='reach_bottom' wx:if='{{off_on && page>1}}'>我是有底线的</view>
+        <template is="loading" data wx:if='{{!off_on && offset>=1}}'></template>
+        <view class='reach_bottom' wx:if='{{off_on && offset>1}}'>我是有底线的</view>
     </view>
 </scroll-view>

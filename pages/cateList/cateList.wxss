@@ -1,1 +1,83 @@
 /* pages/cateList/cateList.wxss */
+@import '../../css/animate.wxss';
+.cateList_containter{
+    width: 90%;
+    margin: auto;
+}
+.cate_itle{
+    width: 100%;
+    height: 70rpx;
+    line-height: 80rpx;
+    font-size: 32rpx;
+    font-weight: 500;
+    background: white;
+    padding-left: 5%;
+    z-index: 99;
+    border-bottom: 1rpx solid #f8f8f8;
+}
+.cate_itemList{
+    padding: 20rpx 0;
+    display: flex;
+    border-bottom: 1rpx solid #e2e2e2;
+}
+.cate_itemList_image{
+    width: 200rpx;
+    height: 150rpx;
+    border-radius: 10rpx;
+}
+.cate_itemList_text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    margin-left: 15rpx;
+}
+.cate_itemList_text_1{
+    font-size: 30rpx;
+}
+.cate_itemList_text_2{
+    max-width: 460rpx;
+    font-size: 25rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cate_itemList_text_3{
+    font-size: 23rpx;
+}
+.cate_sot_options{
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    height: 50rpx;
+    align-items: center;
+    padding: 0 0 10rpx 0;
+    background: #ffffff;
+    z-index: 99;
+}
+/* 显示隐藏过度 */
+.cate_sot_options_show{
+    opacity: 6;
+    visibility: visible;
+    transition: all .5s linear;
+}
+.cate_sot_options_none{
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s linear;
+}
+
+.cate_sot_options view{
+    flex: 1;
+    font-size: 25rpx;
+}
+.cate_sot_options view:nth-child(2){
+   text-align: center;
+}
+.strong{
+    font-weight: 600;
+}
+.color{
+    color: #707070;
+}

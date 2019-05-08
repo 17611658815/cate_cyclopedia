@@ -6,7 +6,7 @@
             {{item.title}}
         </view>
         <view class='clsaa_list_item_container'>
-            <view class='clsaa_list_item_icon' wx:for='{{item.entries}}' wx:for-item="twodata" wx:key='key' style="background-image: url('{{twodata.picurl}}'); background-size: 100% 100%;"> 
+            <view class='clsaa_list_item_icon' wx:for='{{item.entries}}' wx:for-item="twodata" wx:key='key' bindtap='gocateList' data-q='{{twodata.name}}' style="background-image: url('{{twodata.picurl}}'); background-size: 100% 100%;"> 
                  <view class='clsaa_list_item_icon_title'>
                     {{twodata.name}}
                  </view>

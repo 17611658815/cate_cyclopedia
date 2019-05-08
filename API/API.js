@@ -34,4 +34,16 @@ export const api = {
     searchSelect: function (paramObj) {
         return Promise.get(Url.default.searchSelectUrl(paramObj), paramObj);
     },
+    /**
+     * 热门搜索
+     */
+    getHotListItem: function (paramObj) {
+        return Promise.get(Url.default.hotSearchUrl(paramObj), paramObj);
+    },
+    /**
+     * 搜索详情
+     */
+    searchDetaile: function (paramObj) {
+        return Promise.get(Url.default.searchDetaileUrl(paramObj), paramObj);
+    },
 }

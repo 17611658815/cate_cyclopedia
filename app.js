@@ -57,7 +57,12 @@ App({
         height: 0,
     },
     loadingShow() {
-
+        wx.showLoading({
+            title: '加载中',
+        })
+    },
+    hideLoading(){
+        wx.hideLoading()
     },
     //挂载全局app
     net: {

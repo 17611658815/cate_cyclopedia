@@ -27,17 +27,23 @@ Page({
     },
     loadList(){
         let that = this,
-            param = new Object();
-            param.is_weapp = 1,
-            param.weapp_src ='xcf'
+        param = new Object();
+        param.is_weapp = 1,
+        param.weapp_src ='xcf'
+        app.loadingShow()
         app.net.$Api.getclassList(param).then((res) => {
-            res.data.content.forEach(vla=>{
-                console.log(vla)
-            })
+            app.hideLoading()
             that.setData({
                 classlits: res.data.content
             })
            
+        })
+    },
+    gocateList(e){
+        let that = this;
+        let q = e.currentTarget.dataset.q;
+        wx.navigateTo({
+            url: '/pages/cateList/cateList?q=' + q,
         })
     },
     /**

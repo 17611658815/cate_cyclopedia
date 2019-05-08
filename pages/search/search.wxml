@@ -2,12 +2,24 @@
 <view class='search_ctn' style='margin-top:{{height*2 + 20}}px;' catchtap='delSelect'>
     <view class='search_input'>
         <view class='search_input_cnt'>
-            <input type='text' bindinput='inputSearch' bindconfirm='gosearchMsg' data-q='{{inputVal}}' value='{{inputVal}}' placeholder='寻味美食 / 一触及达' placeholder-class='plhclass'></input>
-            <view>取消</view>
+            <input type='text' bindinput='inputSearch' bindfocus="inputSearch" bindconfirm='gosearchMsg' data-q='{{inputVal}}' value='{{inputVal}}' placeholder='寻味美食 / 一触及达' placeholder-class='plhclass'></input>
+            <view bindtap='cancelBack'>取消</view>
         </view>
         <view class='selectContent'>
             <view class='search_input_slect' wx:for="{{searchResultDatas}}" wx:key='item'>
-                <searchHighlightTextView  class="result-item" datas='{{searchData[index]}}' catchtap='gosearchMsg' data-val='{{item}}' />
+                <searchHighlightTextView class="result-item" datas='{{searchData[index]}}' catchtap='gosearchMsg' data-val='{{item}}' />
+            </view>
+        </view>
+        <view class='search_type_title dp' wx:if='{{history.length>0}}'><text>搜索历史</text><text bindtap='delHistory'>清空</text></view>
+        <view class='search_hotcontent' wx:if='{{history.length>0}}'>
+            <view class='hot_item' wx:for='{{history}}' data-val='{{item}}' catchtap='gosearchMsg' wx:key='key'>
+                {{item}}
+            </view>
+        </view>
+        <view class='search_type_title'>热门搜索</view>
+        <view class='search_hotcontent'>
+            <view class='hot_item' wx:for='{{hotList}}' data-val='{{item}}' catchtap='gosearchMsg' wx:key='key'>
+                {{item}}
             </view>
         </view>
     </view>

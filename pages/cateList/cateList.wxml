@@ -1,5 +1,32 @@
 <import src="../../templates/loading/loading.wxml"></import>
 <header-nav navbar-data='{{nvabarData}}'></header-nav>
-<view  style='margin-top:{{height*2 + 20}}px;'>
-    
+<view class='cateList_containter' style='margin-top:{{height*2 + 20}}px;'>
+    <view class='cate_itle' style='position: fixed;left:0;top:{{height*2 + 20}};'>
+        {{query}}
+    </view>
+    <view class='cate_itle'></view>
+    <view class='cate_sot_options {{scroTop>100 ? "cate_sot_options_none":"cate_sot_options_show"}}' style='position:fixed;left:0;top:{{height*2 + 20}};'>
+        <view bindtap='switcherTab' data-tab='0' class='{{currentTab==0 ? "strong":"color"}}'>综合</view>
+        <view bindtap='switcherTab' data-tab='1' class='{{currentTab==1 ? "strong":"color"}}' style='text-align: center;'>评分最高</view>
+        <view bindtap='switcherTab' data-tab='2' class='{{currentTab==2 ? "strong":"color"}}' style='text-align: right;'>做过最多</view>
+    </view>
+    <view class='cate_sot_options'></view>
+    <scroll-view style='height:100%'>
+        <view class='cate_itemList' wx:for="{{cateList}}" wx:key='key' data-id='{{item.content.object.id}}' bindtap='goDetaile'>
+            <image class='cate_itemList_image' mode='scaleToFill' lazy-load='true' src='{{item.content.object.thumb}}'></image>
+            <view class='cate_itemList_text'>
+                <view class='cate_itemList_text_1'>
+                    {{item.content.object.name}}
+                </view>
+                <view class='cate_itemList_text_2'>
+                    <text wx:for="{{item.content.object.ingredient}}" wx:for-item="j">{{j.name}},</text>
+                </view>
+                <view class='cate_itemList_text_3' wx:if="{{item.content.object.score!=''}}">
+                    {{item.content.object.score}}
+                </view>
+            </view>
+        </view>
+        <template is="loading" data wx:if='{{!off_on && offset>0}}'></template>
+        <view class='reach_bottom' wx:if='{{off_on && offset>0}}'>我是有底线的</view>
+    </scroll-view>
 </view>

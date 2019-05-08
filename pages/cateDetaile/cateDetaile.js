@@ -28,11 +28,13 @@ Page({
     },
     loadList() {
         let that = this,
-            param = new Object();
-            param.is_weapp = 1,
-            param.weapp_src = 'xcf',
-            param.id = that.data.id
+        param = new Object();
+        param.is_weapp = 1,
+        param.weapp_src = 'xcf',
+        param.id = that.data.id
+        app.loadingShow()
         app.net.$Api.getCatedetaile(param).then((res) => {
+            app.hideLoading()
             that.setData({
                 detaileObj: res.data.content.recipe,
                 "nvabarData.title": res.data.content.recipe.name

@@ -116,7 +116,9 @@ Page({
     onscrollBotm() {
         let that = this;
         if (!that.data.off_on) {
-            that.data.offset += 20;
+            that.setData({
+                offset: that.data.offset += 20
+            })
             that.loadImages()
         }
     },
