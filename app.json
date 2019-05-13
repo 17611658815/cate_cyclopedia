@@ -31,12 +31,6 @@
                 "text": "分类",
                 "iconPath": "images/tabber/classifyitem.png",
                 "selectedIconPath": "images/tabber/classifyitemselected.png"
-            },
-            {
-                "pagePath": "pages/logs/logs",
-                "text": "我的",
-                "iconPath": "images/tabber/checkeditem.png",
-                "selectedIconPath": "images/tabber/checkeditemselected.png"
             }
         ]
     },

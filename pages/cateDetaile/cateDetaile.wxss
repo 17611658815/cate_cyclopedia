@@ -11,7 +11,9 @@
 }
 .cate_title_title{
     font-size: 40rpx;
+    position: relative;
 }
+
 .cate_title_hot{
     font-size: 25rpx;
     margin-top: 30rpx;
@@ -26,13 +28,17 @@
 }
 .cate_foodmaterial{
     width: 90%;
-    padding-bottom: 30rpx;
+    padding-bottom: 90rpx;
     margin: auto;
 }
 .cate_fmt_title{
-    font-size: 36rpx;
-    font-weight: 600;
+    width: 100%;
     margin:40rpx 0;
+    position: relative;
+}
+.cate_fmt_title_txt{
+     font-size: 36rpx;
+    font-weight: 600;
 }
 .cate_fmt_item{
     display: flex;
@@ -64,4 +70,22 @@
     font-size: 30rpx;
     line-height: 2;
     border-bottom: 1rpx solid #e2e2e2;
+}
+.cateDetaile_share{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 36rpx;
+    color: #707070;
+    text-align: center;
+    font-weight: 500;
+}
+
+.cateDetaile_share image{
+    width: 50rpx;
+    height: 50rpx;
+    vertical-align: middle;
 }

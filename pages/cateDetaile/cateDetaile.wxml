@@ -11,7 +11,15 @@
             <view class='cate_title_root'>本平台数据均来自www.xiachufang.com(非商用行为)</view>
         </view>
         <view class='cate_foodmaterial'>
-            <view class='cate_fmt_title'>用料</view>
+            <view class='cate_fmt_title'>
+                <view class='cate_fmt_title_txt'>用料</view>
+                <!-- <view class='cateDetaile_share'>
+                    <image src='../../images/wx.png'></image>
+                    <view>
+                        分享
+                    </view>
+                </view> -->
+            </view>
             <view class='cate_fmt_item' wx:for='{{detaileObj.ingredient}}' wx:for-item="j" wx:key="j">
                 <view>{{j.name}}</view>
                 <view>{{j.amount}}</view>
@@ -24,6 +32,6 @@
                 <view class='cate_fmt_step_textmsg'>{{k.text}}</view>
             </view>
         </view>
-
     </view>
+
 </view>
