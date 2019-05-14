@@ -91,7 +91,7 @@
     border-radius: 0 0 10rpx 10rpx;
     padding-left: 2%;
 }
-/* .index_img_title{
+.index_img_title{
     margin-bottom: 10rpx;
 }
 .index_img_title .index_img_title_item{
@@ -103,7 +103,7 @@
     text-overflow:ellipsis;
     display:-webkit-box;
     -webkit-box-orient:vertical;
-    -webkit-line-clamp:2;
+    -webkit-line-clamp:1;
     overflow:hidden;
 }
 .index_img_title_hot{
@@ -114,7 +114,7 @@
     color: #707070;
     font-weight: 500;
     margin-right: 20rpx;
-} */
+}
 
 
 

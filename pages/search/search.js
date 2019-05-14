@@ -62,7 +62,7 @@ Page({
                     }
                 })
                 that.setData({
-                    searchData,
+                    searchData: searchData.slice(0, 10),
                     searchResultDatas: res.data.content.keywords
                 })
             })

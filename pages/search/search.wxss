@@ -31,7 +31,6 @@
 }
 .selectContent{
     width: 100%;
-    max-height: 500rpx;
     font-size: 30rpx;
     color: #333333;
     border-bottom: 1rpx solid #e2e2e2; 

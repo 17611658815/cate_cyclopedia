@@ -1,6 +1,7 @@
 {
     "enablePullDownRefresh": true,
     "usingComponents": {
-        "header-nav": "../../components/headerNav/headerNav"
+        "header-nav": "../../components/headerNav/headerNav",
+        "waterFallView": "../../components/WaterFallView/WaterFallView"
     }
 }

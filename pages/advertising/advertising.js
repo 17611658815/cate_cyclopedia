@@ -6,7 +6,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        miao: 6,
+        miao: 5,
         time: '',
         height: "",
         nvabarData: {
