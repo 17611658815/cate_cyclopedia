@@ -2,7 +2,6 @@
     "pages": [
         "pages/advertising/advertising",
         "pages/index/index",
-        "pages/logs/logs",
         "pages/scroll_view/scroll_view",
         "pages/classify/classify",
         "pages/cateDetaile/cateDetaile",

@@ -25,6 +25,7 @@ Page({
 
     },
     onLoad: function() {
+        app.globalData.share = false;
         wx.getSystemInfo({
             success: (res) => {
                 let ww = res.windowWidth,
