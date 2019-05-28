@@ -30,26 +30,38 @@
         </view>
         <view class='img_container'>
             <view class="img_item">
-                <view wx:for="{{col1}}" wx:key="id" data-id='{{item.recipe.id}}' bindtap='goDetaile'>
-                    <image class='index_img_item'  src="{{item.recipe.photo}}" style="width:100%;height:{{item.height}}px"></image>
+                <view wx:for="{{col1}}" wx:key="id" class='img_item_box' data-id='{{item.recipe.id}}' bindtap='goDetaile'>
+                    <image class='index_img_item' src="{{item.recipe.photo}}" style="width:100%;height:{{item.height}}px"></image>
                     <view class='index_img_title'>
                         <view class='index_img_title_item'>{{item.recipe.name}}</view>
+                        <view class='index_img_title_mark'>
+                           <view wx:if='{{item.recipe.stats.n_cooked>0}}'>
+                                <image class='mark' src='../../images/icon/icon-pingfen.png'></image> {{item.recipe.stats.n_cooked}}</view>
+                            <view wx:if='{{item.recipe.score!=""}}'>
+                                <image class='mark' src='../../images/icon/icon-trophy.png'></image> {{item.recipe.score}}</view>
+                        </view>
                     </view>
-                </view> 
+                </view>
             </view>
             <view class="img_item">
-                <view wx:for="{{col2}}" wx:key="id" data-id='{{item.recipe.id}}' bindtap='goDetaile'>
-                    <image class='index_img_item'  src="{{item.recipe.photo}}" style="width:100%;height:{{item.height}}px"></image>
+                <view wx:for="{{col2}}" wx:key="id" class='img_item_box' data-id='{{item.recipe.id}}' bindtap='goDetaile'>
+                    <image class='index_img_item' src="{{item.recipe.photo}}" style="width:100%;height:{{item.height}}px"></image>
                     <view class='index_img_title'>
                         <view class='index_img_title_item'>{{item.recipe.name}}</view>
+                        <view class='index_img_title_mark'>
+                            <view wx:if='{{item.recipe.stats.n_cooked>0}}'>
+                                <image class='mark' src='../../images/icon/icon-pingfen.png'></image> {{item.recipe.stats.n_cooked}}</view>
+                            <view wx:if='{{item.recipe.score!=""}}'>
+                                <image class='mark' src='../../images/icon/icon-trophy.png'></image> {{item.recipe.score}}</view>
+                        </view>
                     </view>
                 </view>
             </view>
 
         </view>
-        
-        <template is="loading" data wx:if='{{!off_on && offset>=1}}'></template>
-        <view class='reach_bottom' wx:if='{{off_on && offset>1}}'>我是有底线的</view>
+
+        <template is="loading" data wx:if='{{!off_on}}'></template>
+        <view class='reach_bottom' wx:if='{{off_on}}'>我是有底线的</view>
 
     </view>
 </scroll-view>

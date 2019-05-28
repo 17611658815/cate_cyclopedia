@@ -1,7 +1,7 @@
 <header-nav navbar-data='{{nvabarData}}'></header-nav>
 <view style='margin-top:{{height*2 + 20}}px;'>
     <view class='cateDetaile_header'>
-        <image mode="scaleToFill" class='cate_thumb' src="{{detaileObj.photo580}}"></image>
+        <image mode="widthFix" class='cate_thumb' src="{{detaileObj.photo}}"></image>
         <view class='cate_title'>
             <view class='cate_title_title'>{{detaileObj.name}}</view>
             <view class='cate_title_hot'>
@@ -28,7 +28,7 @@
                 <view class='cate_fmt_step_txt'>
                     步骤{{index+1}}
                 </view>
-                <image wx:if='{{k.url!=""}}' lazy-load='true' mode='scaleToFill' src='{{k.url}}'></image>
+                <image wx:if='{{k.url!=""}}' lazy-load='true' mode='widthFix' src='{{k.url}}'></image>
                 <view class='cate_fmt_step_textmsg'>{{k.text}}</view>
             </view>
         </view>
