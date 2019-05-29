@@ -17,12 +17,10 @@
 }
 .cate_itemList{
     padding: 20rpx 0;
-    display: flex;
     border-bottom: 1rpx solid #e2e2e2;
 }
 .cate_itemList_image{
-    width: 200rpx;
-    height: 150rpx;
+    width: 100%;
     border-radius: 10rpx;
 }
 .cate_itemList_text{
@@ -31,17 +29,26 @@
     flex-direction: column;
     align-content: center;
     justify-content: space-between;
-    margin-left: 15rpx;
 }
 .cate_itemList_text_1{
     font-size: 30rpx;
+    color: #333333;
 }
 .cate_itemList_text_2{
-    max-width: 460rpx;
+    width: 100%;
     font-size: 25rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10rpx;
+   
+}
+.cate_itemList_text_2_content{
+    flex: 1;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: #707070;
 }
 .cate_itemList_text_3{
     font-size: 23rpx;

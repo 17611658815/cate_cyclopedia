@@ -136,12 +136,23 @@ scroll-view{
     display: flex;
     align-items: center;
 }
+
+.author_name{
+    width: 140rpx;
+    display: block;
+    white-space :nowrap;
+    overflow: hidden;
+}
 .mark{
     width: 30rpx;
     height: 30rpx;
     margin-right: 10rpx;
     vertical-align: middle;
 }
-
+.radious{
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+}
 
 

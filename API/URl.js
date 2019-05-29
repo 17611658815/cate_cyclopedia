@@ -3,7 +3,7 @@ export default class Url {
 
     //主页热门
     static getHomeListUrl(data) {
-        return Url.PATH + '/recipes/popular_v3.json?weapp_src=xcf&is_weapp=1&limit=15&offset=' + data.offset
+        return Url.PATH + '/recipes/popular_v3.json?weapp_src=xcf&is_weapp=' + data.is_weapp + '&limit=10&offset=' + data.offset
     };
     //分类
     static classitemUrl(data) {

@@ -21,7 +21,8 @@ Page({
             title: '食典录',
         },
         pullDown: false,
-        offset: 0
+        offset: 0,
+        is_weapp:1,
 
     },
     onLoad: function() {
@@ -91,6 +92,7 @@ Page({
             images =[],
             param = new Object();
             param.offset = that.data.offset,
+            param.is_weapp = that.data.is_weapp
             app.net.$Api.getHomeList(param).then((res) => {
                 if (res.data.content.recipes.length > 0) {
                     for (var i = 0; i < res.data.content.recipes.length; i++) {
@@ -116,8 +118,10 @@ Page({
     onscrollBotm() {
         let that = this;
         if (!that.data.off_on) {
+            that.data.is_weapp++
             that.setData({
-                offset: that.data.offset += 20
+                offset: that.data.offset+=10,
+                is_weapp: that.data.is_weapp
             })
             that.loadImages()
         }
