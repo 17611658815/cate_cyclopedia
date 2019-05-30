@@ -2,7 +2,7 @@
 <header-nav navbar-data='{{nvabarData}}'></header-nav>
 <view class='cateList_containter' style='margin-top:{{height*2 + 20}}px;'>
     <view class='cate_itle' style='position: fixed;left:0;top:{{height*2 + 20}};'>
-        {{query}}
+        <view class='cate_itle_title'>{{query}}</view>
     </view>
     <view class='cate_itle'></view>
     <view class='cate_sot_options {{scroTop>100 ? "cate_sot_options_none":"cate_sot_options_show"}}' style='position:fixed;left:0;top:{{height*2 + 20}};'>
@@ -15,8 +15,7 @@
         <view class='cate_itemList' wx:for="{{cateList}}" wx:key='key' data-id='{{item.content.object.id}}' bindtap='goDetaile'>
             <image class='cate_itemList_image' lazy-load='true' src='{{item.content.object.photo640}}'></image>
             <view class='cate_itemList_text'>
-                <view class='cate_itemList_text_1'>
-                    {{item.content.object.name}} <text wx:if="{{item.content.object.score!=''}}"> {{item.content.object.score}}分</text>
+                <view class='cate_itemList_text_1'>{{item.content.object.name}}<text wx:if="{{item.content.object.score!=''}}">{{item.content.object.score}}分</text>
                 </view>
                 <view class='cate_itemList_text_2'>
                     <view class='cate_itemList_text_2_content'><text wx:for="{{item.content.object.ingredient}}" wx:for-item="j">{{j.name}},</text></view>

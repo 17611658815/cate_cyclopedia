@@ -23,6 +23,7 @@ Page({
         pullDown: false,
         offset: 0,
         is_weapp:1,
+        loading:false
 
     },
     onLoad: function() {
@@ -92,7 +93,8 @@ Page({
             images =[],
             param = new Object();
             param.offset = that.data.offset,
-            param.is_weapp = that.data.is_weapp
+            param.is_weapp = that.data.is_weapp;
+            that.data.off_on = true;
             app.net.$Api.getHomeList(param).then((res) => {
                 if (res.data.content.recipes.length > 0) {
                     for (var i = 0; i < res.data.content.recipes.length; i++) {
@@ -106,7 +108,7 @@ Page({
                         off_on: false,
                         loadingCount: images.length,
                         images: images,
-                        page: that.data.page
+                        page: that.data.page,
                     })
                 } else {
                     that.setData({
@@ -118,10 +120,8 @@ Page({
     onscrollBotm() {
         let that = this;
         if (!that.data.off_on) {
-            that.data.is_weapp++
             that.setData({
-                offset: that.data.offset+=10,
-                is_weapp: that.data.is_weapp
+                offset: that.data.offset+=1,
             })
             that.loadImages()
         }
