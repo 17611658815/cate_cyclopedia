@@ -41,8 +41,8 @@ scroll-view{
     background: white;
 }
 .index-serch-link-icon{
-    width: 32rpx;
-    height: 32rpx;
+    width: 35rpx;
+    height: 35rpx;
     margin-right: 10rpx;
     vertical-align: middle;
 }
@@ -155,4 +155,7 @@ scroll-view{
     border-radius: 50%;
 }
 
-
+.index-serch-link-text{
+    font-size: 35rpx;
+    font-family: Microsoft JhengHei;
+}
