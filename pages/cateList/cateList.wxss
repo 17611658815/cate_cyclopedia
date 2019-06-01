@@ -1,4 +1,3 @@
-/* pages/cateList/cateList.wxss */
 @import '../../css/animate.wxss';
 .cateList_containter{
     width: 90%;
@@ -6,7 +5,7 @@
 }
 .cate_itle{
     width: 100%;
-    height: 70rpx;
+    height: 80rpx;
     line-height: 80rpx;
     font-size: 40rpx;
     font-weight: 500;

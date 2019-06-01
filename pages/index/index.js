@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const utils = require('../../utils/util.js')
+const title = require('../../utils/title.js')
 const app = getApp()
 let col1H = 0;
 let col2H = 0;
@@ -22,8 +23,10 @@ Page({
         },
         pullDown: false,
         offset: 0,
-        is_weapp:1,
-        loading:false
+        limit: 20,
+        is_weapp: 1,
+        loading: false,
+        title: ""
 
     },
     onLoad: function() {
@@ -38,6 +41,7 @@ Page({
                     scrollH: scrollH,
                     imgWidth: imgWidth,
                     height: app.globalData.height,
+                    title: title[Math.floor(Math.random() * title.length)]
                     // scrollH: ww / wh * 750-150 计算rem
                 });
                 this.loadImages();
@@ -45,6 +49,17 @@ Page({
         })
 
     },
+    // unique1(arr) {
+    //     var hash = [];
+    //     for (var i = 0; i < arr.length; i++) {
+    //         if (arr[i].recipe.id == arr[i].recipe.id) {
+    //             arr.splice(i, 1)
+    //         }
+    //     }
+    //     return hash;
+    //     console.log(hash)
+        
+    // },
     onImageLoad: function(e) {
         let imageId = e.currentTarget.id;
         let oImgW = e.detail.width; //图片原始宽度
@@ -54,7 +69,6 @@ Page({
         let imgHeight = oImgH * scale; //自适应高度
         let images = this.data.images;
         let imageObj = null;
-
         for (let i = 0; i < images.length; i++) {
             let img = images[i];
             if (img.recipe.id === imageId) {
@@ -90,38 +104,40 @@ Page({
     },
     loadImages: function() {
         let that = this,
-            images =[],
+            images = [],
             param = new Object();
-            param.offset = that.data.offset,
+        param.offset = that.data.offset,
+            param.limit = that.data.limit,
             param.is_weapp = that.data.is_weapp;
-            that.data.off_on = true;
-            app.net.$Api.getHomeList(param).then((res) => {
-                if (res.data.content.recipes.length > 0) {
-                    for (var i = 0; i < res.data.content.recipes.length; i++) {
-                        images.push(res.data.content.recipes[i])
-                    }
-                    let baseId = "img-" + (+new Date());
-                    for (let i = 0; i < images.length; i++) {
-                        images[i].recipe.author.id = baseId + "-" + i;
-                    }
-                    that.setData({
-                        off_on: false,
-                        loadingCount: images.length,
-                        images: images,
-                        page: that.data.page,
-                    })
-                } else {
-                    that.setData({
-                        off_on: true
-                    })
+        that.data.off_on = true;
+        app.net.$Api.getHomeList(param).then((res) => {
+
+            if (res.data.content.recipes.length > 0) {
+                for (var i = 0; i < res.data.content.recipes.length; i++) {
+                    images.push(res.data.content.recipes[i])
                 }
-            })
+                let baseId = "img-" + (+new Date());
+                for (let i = 0; i < images.length; i++) {
+                    images[i].recipe.author.id = baseId + "-" + i;
+                }
+                that.setData({
+                    off_on: false,
+                    loadingCount: images.length,
+                    images: images,
+                    page: that.data.page,
+                })
+            } else {
+                that.setData({
+                    off_on: true
+                })
+            }
+        })
     },
     onscrollBotm() {
         let that = this;
         if (!that.data.off_on) {
             that.setData({
-                offset: that.data.offset+=1,
+                offset: that.data.offset += 20,
             })
             that.loadImages()
         }
@@ -133,29 +149,34 @@ Page({
         var that = this;
         that.setData({
             pullDown: true,
-            images:[]
+           
         })
         wx.vibrateShort()
         wx.showNavigationBarLoading() //在标题栏中显示加载
-        that.onLoad()
+      
         setTimeout(function() {
             wx.hideNavigationBarLoading() //完成停止加载
             wx.stopPullDownRefresh() //停止下拉刷新
             that.setData({
-                pullDown: false
+                pullDown: false,
+                images: [],
+                col1: [],
+                col2: []
             })
+            that.onLoad()
+           
         }, 1500);
     },
-    goDetaile(e){
+    goDetaile(e) {
         let id = e.currentTarget.dataset.id;
         wx.navigateTo({
-            url: '/pages/cateDetaile/cateDetaile?id='+id,
+            url: '/pages/cateDetaile/cateDetaile?id=' + id,
         })
     },
-     onShareAppMessage: function () {
+    onShareAppMessage: function() {
         var that = this;
         return {
-            title:"今天想吃点什么？",
+            title: "今天想吃点什么？",
             path: '/pages/index/index',
         }
     },

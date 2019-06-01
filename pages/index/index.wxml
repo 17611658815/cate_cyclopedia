@@ -16,7 +16,7 @@
                 </view>
             </view>
         </navigator>
-        <view class='index-slogan'>做有灵魂的食物</view>
+        <view class='index-slogan'>{{title}}</view>
         <!-- 正常布局 -->
         <!-- <view class='img_container'>
             <view class='img_container_item' wx:for="{{images}}" data-id='{{item.recipe.id}}' bindtap='goDetaile'>
