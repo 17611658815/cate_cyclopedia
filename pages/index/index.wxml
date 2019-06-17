@@ -3,6 +3,7 @@
 <view wx:if='{{!pullDown}}' style='height:{{height*2 + 20}}px;'></view>
 <view wx:else style='height:{{height+20}}px;'></view>
 <template is="loading" data wx:if='{{pullDown}}'></template>
+
 <scroll-view scroll-y="true" style="height:100%;">
     <view style="width:100%;height:100%">
         <view class='swipe-wrap'>
@@ -17,13 +18,6 @@
             </view>
         </navigator>
         <view class='index-slogan'>{{title}}</view>
-        <!-- 正常布局 -->
-        <!-- <view class='img_container'>
-            <view class='img_container_item' wx:for="{{images}}" data-id='{{item.recipe.id}}' bindtap='goDetaile'>
-                <image lazy-load='true' mode="scaleToFill" src="{{item.recipe.photo}}"></image>
-                <view class='img_container_item_title'>{{item.recipe.name}}</view>
-            </view>
-        </view> -->
         <!-- 瀑布流 -->
         <view style="display:none">
             <image wx:for="{{images}}" wx:key="id" id="{{item.recipe.id}}" src="{{item.recipe.photo}}" bindload="onImageLoad"></image>
