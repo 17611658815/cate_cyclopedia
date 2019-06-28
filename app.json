@@ -6,7 +6,8 @@
         "pages/classify/classify",
         "pages/cateDetaile/cateDetaile",
         "pages/search/search",
-        "pages/cateList/cateList"
+        "pages/cateList/cateList",
+        "pages/collect/collect"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -30,6 +31,12 @@
                 "text": "分类",
                 "iconPath": "images/tabber/classifyitem.png",
                 "selectedIconPath": "images/tabber/classifyitemselected.png"
+            },
+            {
+                "pagePath": "pages/collect/collect",
+                "text": "收藏",
+                "iconPath": "images/tabber/collectitem.png",
+                "selectedIconPath": "images/tabber/collectitemselected.png"
             }
         ]
     },

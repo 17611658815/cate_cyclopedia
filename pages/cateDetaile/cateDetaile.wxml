@@ -35,3 +35,7 @@
     </view>
 
 </view>
+
+<view class='collectBox' bindtap='addCollect'>
+    <image src='../../images/icon/addcollect.png'></image>
+</view>

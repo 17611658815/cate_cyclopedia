@@ -41,6 +41,41 @@ Page({
             })
         })
     },
+    addCollect(){
+        let that = this;
+        let push = true;
+        let detaileObj = that.data.detaileObj
+        let CollectList = wx.getStorageSync('CollectList') || [];
+        let itemArr={
+            name: detaileObj.name,
+            id: detaileObj.id,
+            image: detaileObj.photo,
+            
+        }
+        CollectList.forEach((val)=>{
+            console.log(val.name.indexOf(itemArr.name))
+           if (val.name.indexOf(itemArr.name)>-1){
+               push = false
+            }else{
+               push = true
+            }
+        })
+        if (push){
+            CollectList.push(itemArr)
+            wx.showToast({
+                icon: 'success',
+                title: '添加成功',
+            })
+        }else{
+            wx.showToast({
+                icon:'none',
+                title: '不可重复添加',
+            })
+        }
+        
+        wx.setStorageSync("CollectList", CollectList);
+        console.log(CollectList)
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

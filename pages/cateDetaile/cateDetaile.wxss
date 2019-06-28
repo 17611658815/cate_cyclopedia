@@ -89,3 +89,21 @@
     height: 50rpx;
     vertical-align: middle;
 }
+
+.collectBox{
+    width: 150rpx;
+    height: 150rpx;
+    background: #EE5E7B;
+    position: fixed;
+    top: 93%;
+    left: 85%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.collectBox image{
+    width: 80rpx;
+    height: 80rpx;
+}
