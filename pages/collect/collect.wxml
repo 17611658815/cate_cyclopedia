@@ -1,8 +1,9 @@
 <header-nav navbar-data='{{nvabarData}}'></header-nav>
 <view class='CollectList' style='margin-top:{{height*2 + 20}}px;'>
      <view class='CollectList_Box' wx:if="{{CollectList.length>0}}">
-        <view class='CollectList_Box_item' style=' background-image:url({{item.image}})' catchtap='goDetaile' data-id='{{item.id}}' wx:for='{{CollectList}}'>
+        <view class='CollectList_Box_item' catchtap='goDetaile' data-id='{{item.id}}' wx:for='{{CollectList}}'>
         <!-- {{item.name}} -->
+        <image mode="aspectFill" class="imagesPic" src="{{item.image}}"></image>
         <view class='CollectList_Box_item_title'>
             <text style='margin-left:20rpx;'>{{item.name}}</text>
             <image class='del' catchtap='delitem' data-index="{{index}}" src='../../images/icon/del.png'></image>

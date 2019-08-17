@@ -72,3 +72,8 @@
     color: #8A8A8A;
     margin-top: 20rpx;
 }
+.imagesPic{
+    width: 100%;
+    height: 100%;
+     border-radius: 10rpx;
+}
