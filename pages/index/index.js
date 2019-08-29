@@ -42,24 +42,12 @@ Page({
                     imgWidth: imgWidth,
                     height: app.globalData.height,
                     title: title[Math.floor(Math.random() * title.length)]
-                    // scrollH: ww / wh * 750-150 计算rem
                 });
                 this.loadImages();
             }
         })
 
     },
-    // unique1(arr) {
-    //     var hash = [];
-    //     for (var i = 0; i < arr.length; i++) {
-    //         if (arr[i].recipe.id == arr[i].recipe.id) {
-    //             arr.splice(i, 1)
-    //         }
-    //     }
-    //     return hash;
-    //     console.log(hash)
-        
-    // },
     onImageLoad: function(e) {
         let imageId = e.currentTarget.id;
         let oImgW = e.detail.width; //图片原始宽度
