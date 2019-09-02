@@ -29,6 +29,11 @@ Page({
         title: ""
 
     },
+    onShow(){
+        this.setData({
+            title: title[Math.floor(Math.random() * title.length)]
+        })
+    },
     onLoad: function() {
         app.globalData.share = false;
         wx.getSystemInfo({
@@ -41,7 +46,7 @@ Page({
                     scrollH: scrollH,
                     imgWidth: imgWidth,
                     height: app.globalData.height,
-                    title: title[Math.floor(Math.random() * title.length)]
+                   
                 });
                 this.loadImages();
             }

@@ -2,7 +2,7 @@
 <!-- <header-nav navbar-data='{{nvabarData}}'></header-nav> -->
 <view class='main'>
     <view class='adv1'>
-        <image mode='aspectFill' src='../../images/8b03ca87a8a081e6e43657f0ca2a04a.png' class='adv-img'></image>
+        <image mode='aspectFill' src='{{images}}' class='adv-img'></image>
         <text class='tiaoguo' bindtap='cliadv'>跳过广告 {{miao}}</text>
     </view>
     <view class='adv2'>

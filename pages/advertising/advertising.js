@@ -1,4 +1,5 @@
 // pages/advertising/advertising.js
+const images = require('../../utils/images.js')
 const app = getApp()
 Page({
 
@@ -8,13 +9,19 @@ Page({
     data: {
         miao: 5,
         time: '',
+        images:'',
         height: "",
         nvabarData: {
             showCapsule: 0,
             title: '食典录',
         },
     },
-
+    onShow() {
+        this.setData({
+            images: images[Math.floor(Math.random() * images.length)]
+        })
+        console.log(images)
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -51,13 +58,7 @@ Page({
 
     },
 
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function() {
-
-    },
-
+   
     /**
      * 生命周期函数--监听页面隐藏
      */
