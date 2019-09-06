@@ -1,1 +1,1 @@
-module.exports = ["../../images/sp1.jpg", "../../images/sp2.jpg", "../../images/sp3.jpg", "../../images/sp4.jpg"];
+module.exports = ["../../images/sp1.jpg", "../../images/sp2.jpg", "../../images/sp3.jpg", "../../images/sp4.jpg", "../../images/sp5.jpg", "../../images/sp6.jpg", "../../images/sp7.jpg"];

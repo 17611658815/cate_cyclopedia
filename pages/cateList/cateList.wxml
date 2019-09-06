@@ -13,9 +13,9 @@
     <view class='cate_sot_options'></view>
     <scroll-view style='height:100%'>
         <view class='cate_itemList' wx:for="{{cateList}}" wx:key='key' data-id='{{item.content.object.id}}' bindtap='goDetaile'>
-            <image class='cate_itemList_image' lazy-load='true' src='{{item.content.object.photo640}}'></image>
+            <image class='cate_itemList_image' mode="aspectFill" lazy-load='true' src='{{item.content.object.photo640}}'></image>
             <view class='cate_itemList_text'>
-                <view class='cate_itemList_text_1'>{{item.content.object.name}}<text wx:if="{{item.content.object.score!=''}}">{{item.content.object.score}}分</text>
+                <view class='cate_itemList_text_1'>{{item.content.object.name}}<text wx:if="{{item.content.object.score!=''}}" style="margin-left:20rpx;color:#F26B3A;font-weight:500">{{item.content.object.score}}分</text>
                 </view>
                 <view class='cate_itemList_text_2'>
                     <view class='cate_itemList_text_2_content'><text wx:for="{{item.content.object.ingredient}}" wx:for-item="j">{{j.name}},</text></view>
