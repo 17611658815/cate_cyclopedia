@@ -25,12 +25,17 @@
                 <view>{{j.amount}}</view>
             </view>
             <view class='cate_fmt_step' wx:for="{{detaileObj.instruction}}" wx:for-item="k" wx:key="k">
+                <ad unit-id="adunit-394e8d00043446e1" wx:if='{{index==1}}' style='margin-bottom:20rpx;'></ad>
+                <ad unit-id="adunit-665ac6550623f9f7" wx:if='{{index==2}}' style='margin-bottom:20rpx;'></ad>
+                <ad unit-id="adunit-d4861a4ae5fc66db" wx:if='{{index==4}}' style='margin-bottom:20rpx;'></ad>
+                <ad unit-id="adunit-d3bab63e0aca0fab" wx:if='{{index==6}}' style='margin-bottom:20rpx;'></ad>
                 <view class='cate_fmt_step_txt'>
                     步骤{{index+1}}
                 </view>
                 <image wx:if='{{k.url!=""}}' lazy-load='true' mode='aspectFill' src='{{k.url}}'></image>
                 <view class='cate_fmt_step_textmsg'>{{k.text}}</view>
             </view>
+             <ad unit-id="adunit-3ad0c5785f42c240" style='margin-bottom:20rpx;'></ad>
         </view>
     </view>
 

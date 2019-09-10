@@ -13,8 +13,8 @@ Page({
             title: '',
         },
         detaileObj:{},
-
-        writePosition: [80, 90],
+        // 拖拽参数
+        writePosition: [80, 90], //left top
         writesize: [0, 0],// X Y 定位
         window: [0, 0], //屏幕尺寸
         write: [0, 0], //定位参数
@@ -25,7 +25,33 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        // 在页面中定义插屏广告
         let that = this;
+        let interstitialAd = null
+
+        // 在页面onLoad回调事件中创建插屏广告实例
+        if (wx.createInterstitialAd) {
+            interstitialAd = wx.createInterstitialAd({
+                adUnitId: 'adunit-55fea3ae5546fb3a'
+            })
+            interstitialAd.onLoad(() => {
+                console.log('加载')
+             })
+            interstitialAd.onError((err) => {
+                console.log('失败')
+             })
+            interstitialAd.onClose(() => { 
+                
+            })
+        }
+
+        // 在适合的场景显示插屏广告
+        if (interstitialAd) {
+            interstitialAd.show().catch((err) => {
+                console.error(err)
+            })
+        }
+       
         that.setData({
             id: options.id,
             height: app.globalData.height,
@@ -42,6 +68,7 @@ Page({
                 var write = [];
                 write[0] = that.data.window[0] * that.data.writePosition[0] / 100;
                 write[1] = that.data.window[1] * that.data.writePosition[1] / 100;
+                console.log(write,45)
                 that.setData({
                     write: write
                 }, function () {

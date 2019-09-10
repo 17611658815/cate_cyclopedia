@@ -25,19 +25,21 @@
 }
 
 .tiaoguo {
+    width: 70rpx;
+    height: 30rpx;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25rpx;
+    line-height: 30rpx;
+    font-size: 22rpx;
     background-color: wheat;
-    border-radius: 80rpx;
     margin-left: 10rpx;
     position: absolute;
     z-index: 999;
     right: 25rpx;
     bottom: 25rpx;
-    padding-left: 10rpx;
-    padding-right: 10rpx;
+    border-radius: 6rpx;
+  
 }
 
 button {
