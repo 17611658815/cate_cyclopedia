@@ -2,11 +2,11 @@
 <!-- <header-nav navbar-data='{{nvabarData}}'></header-nav> -->
 <view class='main'>
     <view class='adv1'>
-        <image mode='aspectFill' src='{{images}}' class='adv-img'></image>
+        <image mode='scaleToFill' src='{{images}}' class='adv-img'></image>
         <text class='tiaoguo' bindtap='cliadv'>跳过 {{miao}}</text>
     </view>
     <view class='adv2'>
         <button>食典录</button>
-        <text class='text2'>百万菜谱,量身推荐</text>
+        <text class='text2'>{{title}}</text>
     </view>
 </view>

@@ -27,7 +27,6 @@ Page({
         is_weapp: 1,
         loading: false,
         title: ""
-
     },
     onShow(){
         this.setData({

@@ -1,5 +1,6 @@
 // pages/advertising/advertising.js
 const images = require('../../utils/images.js')
+const title = require('../../utils/title.js')
 const app = getApp()
 Page({
 
@@ -9,6 +10,7 @@ Page({
     data: {
         miao: 5,
         time: '',
+        title:'',
         images:'',
         height: "",
         nvabarData: {
@@ -17,10 +19,11 @@ Page({
         },
     },
     onShow() {
+       
         this.setData({
-            images: images[Math.floor(Math.random() * images.length)]
+            images: images[Math.floor(Math.random() * images.length)],
+            title: title[Math.floor(Math.random() * title.length)]
         })
-        console.log(images)
     },
     /**
      * 生命周期函数--监听页面加载
