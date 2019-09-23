@@ -29,6 +29,7 @@ Page({
         title: "",
         isGoTop:false
     },
+    // 点击置顶
     goTop: function () {
         wx.pageScrollTo({
             scrollTop: 0,
