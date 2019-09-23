@@ -159,3 +159,33 @@ scroll-view{
     font-size: 35rpx;
     font-family: Microsoft JhengHei;
 }
+
+/* 返回顶部 */
+.goTopBox{
+    width: 80rpx;
+    height: 80rpx;
+    background: #F26B3A;
+    position: fixed;
+    bottom: 30rpx;
+    right: 30rpx;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.goTopBox image{
+    width: 40rpx;
+    height: 40rpx;
+}
+
+/* 添加我得小程序 */
+.addMiniApp{
+    width: 400rpx;
+    height: 300rpx;
+    position: fixed;
+    top: 10rpx;
+    right: 10rpx;
+    color: #000000;
+    background: #ffffff;
+    z-index: 99999;
+}

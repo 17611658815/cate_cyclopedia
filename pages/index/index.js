@@ -26,7 +26,29 @@ Page({
         limit: 20,
         is_weapp: 1,
         loading: false,
-        title: ""
+        title: "",
+        isGoTop:false
+    },
+    goTop: function () {
+        wx.pageScrollTo({
+            scrollTop: 0,
+            duration: 300
+        });
+        this.setData({
+            isGoTop: false
+        });
+    },
+    onPageScroll: function (e) {
+        if (e.scrollTop > 500){
+            this.setData({
+                isGoTop:true
+            })
+        }else{
+            this.setData({
+                isGoTop: false
+            })
+        }
+        console.log(e.scrollTop) //这个就是滚动到的位置,可以用这个位置来写判断
     },
     onShow(){
         this.setData({
