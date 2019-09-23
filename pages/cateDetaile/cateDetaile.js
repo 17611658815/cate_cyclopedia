@@ -28,30 +28,6 @@ Page({
         // 在页面中定义插屏广告
         let that = this;
         let interstitialAd = null
-
-        // 在页面onLoad回调事件中创建插屏广告实例
-        if (wx.createInterstitialAd) {
-            interstitialAd = wx.createInterstitialAd({
-                adUnitId: 'adunit-55fea3ae5546fb3a'
-            })
-            interstitialAd.onLoad(() => {
-                console.log('加载')
-             })
-            interstitialAd.onError((err) => {
-                console.log('失败')
-             })
-            interstitialAd.onClose(() => { 
-                
-            })
-        }
-
-        // 在适合的场景显示插屏广告
-        if (interstitialAd) {
-            interstitialAd.show().catch((err) => {
-                console.error(err)
-            })
-        }
-       
         that.setData({
             id: options.id,
             height: app.globalData.height,
