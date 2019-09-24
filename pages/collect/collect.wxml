@@ -2,7 +2,6 @@
 <view class='CollectList' style='margin-top:{{height*2 + 20}}px;'>
      <view class='CollectList_Box' wx:if="{{CollectList.length>0}}">
         <view class='CollectList_Box_item' catchtap='goDetaile' data-id='{{item.id}}' wx:for='{{CollectList}}'>
-        <!-- {{item.name}} -->
         <image mode="aspectFill" class="imagesPic" src="{{item.image}}"></image>
         <view class='CollectList_Box_item_title'>
             <text style='margin-left:20rpx;'>{{item.name}}</text>
