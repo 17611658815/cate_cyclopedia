@@ -1,7 +1,6 @@
 /* pages/search/search.wxss */
 .search_ctn{
     width: 90%;
-    min-height: 100vh;
     margin: auto;
 }
 .search_input_cnt{
@@ -63,3 +62,7 @@
     display: flex;
     justify-content: space-between;
 }
+.advertisingBox{
+    margin-top: 100rpx;
+}
+

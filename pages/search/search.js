@@ -14,6 +14,7 @@ Page({
             showCapsule: 1,
             title: '寻味美食',
         },
+        isIphoneX:false
     },
 
     /**
@@ -22,6 +23,7 @@ Page({
     onLoad: function (options) {
         let that = this;
         that.setData({
+            isIphoneX: app.globalData.isIphoneX,
             height: app.globalData.height,
             history: wx.getStorageSync('searchRecord') || [],//若无储存则为空
         })

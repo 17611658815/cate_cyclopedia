@@ -18,6 +18,9 @@ App({
         //虽然最后解决了，但是花费了不少时间
         wx.getSystemInfo({
             success: (res) => {
+                if (res.model.search('iPhone X') != -1) {
+                    this.globalData.isIphoneX = true
+                }
                 this.globalData.height = res.statusBarHeight
             }, fail(err) {
                 console.log(err);
@@ -58,6 +61,7 @@ App({
         userInfo: null,
         share: false,  // 分享默认为false
         height: 0,
+        isIphoneX:false
     },
     loadingShow() {
         wx.showLoading({

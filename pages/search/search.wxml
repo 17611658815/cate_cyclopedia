@@ -10,7 +10,10 @@
                 <searchHighlightTextView class="result-item" datas='{{searchData[index]}}' catchtap='gosearchMsg' data-val='{{item}}' />
             </view>
         </view>
-        <view class='search_type_title dp' wx:if='{{history.length>0}}'><text>搜索历史</text><text bindtap='delHistory'>清空</text></view>
+        <view class='search_type_title dp' wx:if='{{history.length>0}}'>
+            <text>搜索历史</text>
+            <text bindtap='delHistory'>清空</text>
+        </view>
         <view class='search_hotcontent' wx:if='{{history.length>0}}'>
             <view class='hot_item' wx:for='{{history}}' data-val='{{item}}' catchtap='gosearchMsg' wx:key='key'>
                 {{item}}
@@ -22,5 +25,9 @@
                 {{item}}
             </view>
         </view>
+        <view class="advertisingBox">
+            <ad unit-id="adunit-92a612528aa85dc1" ad-type="video" ad-theme="white"></ad>
+        </view>
     </view>
+    
 </view>
