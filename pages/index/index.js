@@ -51,6 +51,7 @@ Page({
         }
     },
     onShow(){
+        console.log(app.globalData.isIphoneX)
         this.setData({
             title: title[Math.floor(Math.random() * title.length)]
         })
@@ -75,14 +76,17 @@ Page({
 
     },
     onImageLoad: function(e) {
+        console.log(e)
         let imageId = e.currentTarget.id;
         let oImgW = e.detail.width; //图片原始宽度
         let oImgH = e.detail.height; //图片原始高度
         let imgWidth = this.data.imgWidth; //图片设置的宽度
         let scale = imgWidth / oImgW; /*比例计算*/
+        console.log(imgWidth, oImgW)
         let imgHeight = oImgH * scale; //自适应高度
         let images = this.data.images;
         let imageObj = null;
+        console.log(imageObj)
         for (let i = 0; i < images.length; i++) {
             let img = images[i];
             if (img.recipe.id === imageId) {
@@ -95,7 +99,7 @@ Page({
         let loadingCount = this.data.loadingCount - 1;
         let col1 = this.data.col1;
         let col2 = this.data.col2;
-
+        console.log(col1H, col1H)
         if (col1H <= col2H) {
             col1H += imgHeight;
             col1.push(imageObj);
@@ -163,7 +167,6 @@ Page({
         var that = this;
         that.setData({
             pullDown: true,
-           
         })
         wx.vibrateShort()
         wx.showNavigationBarLoading() //在标题栏中显示加载

@@ -8,7 +8,7 @@
                 <text>{{detaileObj.score}}综合评分</text>
                 <text>{{detaileObj.stats.n_cooked_last_week}}人最近7天做过</text>
             </view>
-            <view class='cate_title_root'>本平台数据均来自www.xiachufang.com(非商用)</view>
+            <view class='cate_title_root'>本平台数据均来自www.xiachufang.com</view>
         </view>
        
         <view class='cate_foodmaterial'>
