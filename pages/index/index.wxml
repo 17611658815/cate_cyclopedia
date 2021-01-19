@@ -1,15 +1,17 @@
 <import src="../../templates/loading/loading.wxml"></import>
-<header-nav navbar-data='{{nvabarData}}'></header-nav>
+<!-- <header-nav navbar-data='{{nvabarData}}'></header-nav>
 <view wx:if='{{!pullDown}}' style='height:{{height*2 + 20}}px;'></view>
 <view wx:else style='height:{{height+20}}px;'></view>
-<template is="loading" data wx:if='{{pullDown}}'></template>
+<template is="loading" data wx:if='{{pullDown}}'></template> -->
+<nav isBack="{{false}}" seat="{{true}}" backgroundColor='white' titleColor="black" borderColor="white" navTitle="食典">
+</nav>
 
-<!-- <view class="addMiniApp">点击上方添加到我得小程序</view> -->
 
 <scroll-view scroll-y="true" style="height:100%;">
     <view style="width:100%;height:100%">
         <view class='swipe-wrap'>
-            <swiper class="swiper" indicator-dots='true' indicator-color='rgba(255,255, 255, .3)' indicator-active-color="#ffffff" autoplay circular='true' interval="5000" duration="500">
+            <swiper class="swiper" indicator-dots='true' indicator-color='rgba(255,255, 255, .3)'
+                indicator-active-color="#ffffff" autoplay circular='true' interval="5000" duration="500">
                 <swiper-item bindtap="goFlow" data-type="flow4">
                     <image mode='aspectFill' src='../../images/img/b1.jpg'></image>
                 </swiper-item>
@@ -26,34 +28,48 @@
         <view class='index-slogan'>{{title}}</view>
         <!-- 瀑布流 -->
         <view style="display:none">
-            <image wx:for="{{images}}" wx:key="id" id="{{item.recipe.id}}" src="{{item.recipe.photo}}" bindload="onImageLoad"></image>
+            <image wx:for="{{images}}" wx:key="id" id="{{item.recipe.id}}" src="{{item.recipe.photo}}"
+                bindload="onImageLoad"></image>
         </view>
         <view class='img_container'>
-        <ad unit-id="adunit-afbda2510cbf3487"></ad>
+            <ad unit-id="adunit-5303aec78cea5c4d" ad-type="grid" grid-opacity="0.8" grid-count="5" ad-theme="white">
+            </ad>
             <view class="img_item">
-                <view wx:for="{{col1}}" wx:key="id" class='img_item_box' data-id='{{item.recipe.id}}' bindtap='goDetaile'>
-                    <image mode="widthFix" class='index_img_item' src="{{item.recipe.photo}}" style="width:100%;;height:{{item.height}}px;"></image>
+                <view wx:for="{{col1}}" wx:key="id" class='img_item_box' data-id='{{item.recipe.id}}'
+                    bindtap='goDetaile'>
+                    <image mode="widthFix" class='index_img_item' src="{{item.recipe.photo}}"
+                        style="width:100%;;height:{{item.height}}px;"></image>
                     <view class='index_img_title'>
                         <view class='index_img_title_item'>{{item.recipe.name}}</view>
                         <view class='index_img_title_mark'>
-                         <view wx:if='{{item.recipe.author.name!=""}}'>
-                                <image class='mark radious' src='{{item.recipe.author.photo}}'></image><text class='author_name'>{{item.recipe.author.name}}</text> </view>
-                           <view wx:if='{{item.recipe.stats.n_cooked>0}}'>
-                                <image class='mark' src='../../images/icon/icon-pingfen.png'></image> {{item.recipe.stats.n_cooked}}</view>
+                            <view wx:if='{{item.recipe.author.name!=""}}'>
+                                <image class='mark radious' src='{{item.recipe.author.photo}}'></image><text
+                                    class='author_name'>{{item.recipe.author.name}}</text>
+                            </view>
+                            <view wx:if='{{item.recipe.stats.n_cooked>0}}'>
+                                <image class='mark' src='../../images/icon/icon-pingfen.png'></image>
+                                {{item.recipe.stats.n_cooked}}
+                            </view>
                         </view>
                     </view>
                 </view>
             </view>
             <view class="img_item">
-                <view wx:for="{{col2}}" wx:key="id" class='img_item_box' data-id='{{item.recipe.id}}' bindtap='goDetaile'>
-                    <image mode="widthFix" class='index_img_item' src="{{item.recipe.photo}}" style="width:100%;;height:{{item.height}}px"></image>
+                <view wx:for="{{col2}}" wx:key="id" class='img_item_box' data-id='{{item.recipe.id}}'
+                    bindtap='goDetaile'>
+                    <image mode="widthFix" class='index_img_item' src="{{item.recipe.photo}}"
+                        style="width:100%;;height:{{item.height}}px"></image>
                     <view class='index_img_title'>
                         <view class='index_img_title_item'>{{item.recipe.name}}</view>
-                         <view class='index_img_title_mark'>
-                         <view wx:if='{{item.recipe.author.name!=""}}'>
-                                <image class='mark radious' src='{{item.recipe.author.photo}}'></image><text class='author_name'>{{item.recipe.author.name}}</text> </view>
-                           <view wx:if='{{item.recipe.stats.n_cooked>0}}'>
-                                <image class='mark' src='../../images/icon/icon-pingfen.png'></image> {{item.recipe.stats.n_cooked}}</view>
+                        <view class='index_img_title_mark'>
+                            <view wx:if='{{item.recipe.author.name!=""}}'>
+                                <image class='mark radious' src='{{item.recipe.author.photo}}'></image><text
+                                    class='author_name'>{{item.recipe.author.name}}</text>
+                            </view>
+                            <view wx:if='{{item.recipe.stats.n_cooked>0}}'>
+                                <image class='mark' src='../../images/icon/icon-pingfen.png'></image>
+                                {{item.recipe.stats.n_cooked}}
+                            </view>
                         </view>
                     </view>
                 </view>
@@ -68,6 +84,6 @@
 </scroll-view>
 
 <!-- 返回顶部 -->
-<view class="goTopBox" bindtap="goTop" wx:if="{{isGoTop}}">
+<view class="goTopBox {{isGoTop == true ? 'transform1':'transform2'}}" bindtap="goTop">
     <image src="../../images/icon/goTop.png"></image>
 </view>

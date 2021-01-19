@@ -4,6 +4,7 @@
  */
 @import 'css/global.wxss';
 @import "templates/loading/loading.wxss";
+@import "css/animate.wxss";
 .container{
     height: 100%;
     display: flex;

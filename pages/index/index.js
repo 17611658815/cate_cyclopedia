@@ -23,7 +23,7 @@ Page({
         },
         pullDown: false,
         offset: 0,
-        limit: 20,
+        limit: 10,
         is_weapp: 1,
         loading: false,
         title: "",
@@ -49,6 +49,7 @@ Page({
                 isGoTop: false
             })
         }
+        console.log(this.data.isGoTop,52)
     },
     onShow(){
         console.log(app.globalData.isIphoneX)

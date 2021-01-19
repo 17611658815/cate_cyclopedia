@@ -44,6 +44,6 @@ export const api = {
      * 搜索详情
      */
     searchDetaile: function (paramObj) {
-        return Promise.get(Url.default.searchDetaileUrl(paramObj), paramObj);
+        return Promise.post(Url.default.searchDetaileUrl(paramObj), paramObj);
     },
 }

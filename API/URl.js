@@ -21,8 +21,8 @@ export default class Url {
     static hotSearchUrl(data) {
         return Url.PATH + '/search/keyword_hour.json?is_weapp=' + data.is_weapp + '&weapp_src=' + data.xcf;
     }; 
-    //搜索详情
+    //搜索详
     static searchDetaileUrl(data) {
-        return Url.PATH + '/search/universal_search.json?search_type=1001&is_weapp=' + data.is_weapp + '&weapp_src=' + data.xcf + "&offset=" + data.offset + '&limit=20' + "&q=" + data.q + "&order_by=" + data.order_by
+        return Url.PATH + '/search/universal_search_v2.json'
     }; 
 }

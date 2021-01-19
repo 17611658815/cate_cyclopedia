@@ -1,5 +1,6 @@
-<header-nav navbar-data='{{nvabarData}}'></header-nav>
-<view class='CollectList' style='margin-top:{{height*2 + 20}}px;'>
+<!-- <header-nav navbar-data='{{nvabarData}}'></header-nav> -->
+<nav isBack="{{false}}" seat="{{true}}" backgroundColor='white' titleColor="black" borderColor="white" navTitle="我的收藏"></nav>
+<view class='CollectList'>
      <view class='CollectList_Box' wx:if="{{CollectList.length>0}}">
         <view class='CollectList_Box_item' catchtap='goDetaile' data-id='{{item.id}}' wx:for='{{CollectList}}'>
         <image mode="aspectFill" class="imagesPic" src="{{item.image}}"></image>

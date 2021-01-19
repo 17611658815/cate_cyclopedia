@@ -1,5 +1,6 @@
-<header-nav navbar-data='{{nvabarData}}'></header-nav>
-<view style='margin-top:{{height*2 + 20}}px;'>
+<!-- <header-nav navbar-data='{{nvabarData}}'></header-nav> -->
+
+<nav isBack="{{true}}" home='{{true}}' seat="{{false}}" titleColor="white" borderColor="white"></nav>
     <view class='cateDetaile_header'>
         <image mode="aspectFill" class='cate_thumb' src="{{detaileObj.photo}}"></image>
         <view class='cate_title'>
@@ -37,7 +38,6 @@
         </view>
     </view>
 
-</view>
 
 <view class='collectBox' 
     bindtap='addCollect' 

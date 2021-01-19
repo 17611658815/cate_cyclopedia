@@ -1,5 +1,6 @@
-<header-nav navbar-data='{{nvabarData}}'></header-nav>
-<view class='search_ctn' style='margin-top:{{height*2 + 20}}px;' catchtap='delSelect'>
+<!-- <header-nav navbar-data='{{nvabarData}}'></header-nav> -->
+<nav isBack="{{true}}" seat="{{true}}" backgroundColor='white' titleColor="black" borderColor="black" navTitle="寻味美食"></nav>
+<view class='search_ctn' catchtap='delSelect'>
     <view class='search_input'>
         <view class='search_input_cnt'>
             <input type='text' bindinput='inputSearch' bindfocus="inputSearch" bindconfirm='gosearchMsg' data-q='{{inputVal}}' value='{{inputVal}}' placeholder='寻味美食 / 一触及达' placeholder-class='plhclass'></input>

@@ -21,7 +21,9 @@ App({
                 if (res.model.search('iPhone X') != -1) {
                     this.globalData.isIphoneX = true
                 }
-                this.globalData.height = res.statusBarHeight
+                // this.globalData.height = res.statusBarHeight
+                this.globalData.statusBarHeight = res.statusBarHeight
+                this.globalData.navBarHeight = 44 + res.statusBarHeight
             }, fail(err) {
                 console.log(err);
             }
@@ -61,7 +63,9 @@ App({
         userInfo: null,
         share: false,  // 分享默认为false
         height: 0,
-        isIphoneX:false
+        isIphoneX:false,
+        navBarHeight:'',
+        statusBarHeight:''
     },
     loadingShow() {
         wx.showLoading({

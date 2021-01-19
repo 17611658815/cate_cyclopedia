@@ -30,7 +30,6 @@ Page({
         let interstitialAd = null
         that.setData({
             id: options.id,
-            height: app.globalData.height,
         })
         that.loadList();
         that.getSysdata();
@@ -167,6 +166,11 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        var that = this;
+        return {
+            title: that.data.detaileObj.name,
+            path: '/pages/cateDetaile/cateDetaile?id='+that.data.id,
+            imageUrl: that.data.detaileObj.photo
+        }
     }
 })

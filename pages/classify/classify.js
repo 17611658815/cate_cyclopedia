@@ -9,10 +9,6 @@ Page({
         height:0,
         iphonex:false,
         classlits:[],
-        nvabarData: {
-            showCapsule: 0,
-            title: '菜谱分类',
-        },
     },
     /**
      * 生命周期函数--监听页面加载

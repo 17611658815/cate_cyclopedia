@@ -2,6 +2,7 @@
 .cateList_containter{
     width: 90%;
     margin: auto;
+    position: relative;
 }
 .cate_itle{
     width: 100%;
@@ -18,7 +19,7 @@
     margin: auto;
 }
 .cate_itemList{
-    padding: 20rpx 0;
+    padding: 30rpx 0;
     border-bottom: 1rpx solid #e2e2e2;
 }
 .cate_itemList_image{
@@ -31,6 +32,7 @@
     flex-direction: column;
     align-content: center;
     justify-content: space-between;
+    padding-top: 10rpx;
 }
 .cate_itemList_text_1{
     font-size: 33rpx;
@@ -57,8 +59,7 @@
     font-size: 23rpx;
 }
 .cate_sot_options{
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
     display: flex;
     height: 50rpx;
     align-items: center;
@@ -80,7 +81,7 @@
 
 .cate_sot_options view{
     flex: 1;
-    font-size: 25rpx;
+    font-size: 30rpx;
 }
 .cate_sot_options view:nth-child(2){
    text-align: center;
@@ -90,4 +91,34 @@
 }
 .color{
     color: #707070;
+}
+
+
+/* 返回顶部 */
+.goTopBox{
+    width: 80rpx;
+    height: 80rpx;
+    background: #F26B3A;
+    position: fixed;
+    bottom: 30rpx;
+    right: 30rpx;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.goTopBox image{
+    width: 40rpx;
+    height: 40rpx;
+}
+.transform1 {
+    transition: 0.6s;
+    transform: translateX(0);
+    /**左移元素**/
+}
+
+.transform2 {
+    transition: 0.6s;
+    transform: translateX(80px);
+    /**左移元素**/
 }

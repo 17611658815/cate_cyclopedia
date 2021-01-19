@@ -19,6 +19,9 @@ Page({
         off_on:false,
         contType: ['', '-score','-n_dishes'],
         scroTop:0,
+        cursor:'',
+        loading:false,
+        isGoTop:false
     },
 
     /**
@@ -36,7 +39,6 @@ Page({
     },
     switcherTab(e){
         let that = this;
-        app.loadingShow()
         that.setData({
             cateList:[],
             offset:0,
@@ -49,33 +51,47 @@ Page({
         let that = this,
         param = new Object();
         param.is_weapp = 1;
+        param.size = 10
         param.weapp_src = 'xcf';
         param.q = that.data.query;
-        param.offset = that.data.offset;
+        param.cursor = that.data.cursor;
         param.order_by = that.data.contType[that.data.currentTab]
+        that.data.loading = true
         app.net.$Api.searchDetaile(param).then((res) => {
-            app.hideLoading()
-            if (res.data.content.content.length>0){
-                res.data.content.content.forEach(val=>{
-                    that.data.cateList.push(val)
-                    that.data.off_on = false;
+            that.data.loading = false
+            that.data.cursor = res.data.content.cursor.next
+            if (res.data.content.cursor.has_next) {
+                that.setData({
+                    cateList:that.data.cateList.concat(res.data.content.content)
                 })
-            }else{
+            } else {
                 that.data.off_on = true;
             }
-            
-            that.setData({
-                cateList: that.data.cateList,
-                off_on: that.data.off_on
-            })
-            console.log(that.data.cateList)
         })
     },
-    onPageScroll(e){
-        this.setData({
-            scroTop: e.scrollTop
-        })
-    },
+        // 点击置顶
+        goTop: function () {
+            wx.pageScrollTo({
+                scrollTop: 0,
+                duration: 300
+            });
+            this.setData({
+                isGoTop: false
+            });
+        },
+        onPageScroll: function (e) {
+            if (e.scrollTop > 500){
+                this.setData({
+                    isGoTop:true,
+                    scroTop: e.scrollTop
+                })
+            }else{
+                this.setData({
+                    isGoTop: false,
+                    scroTop: e.scrollTop
+                })
+            }
+        },
     goDetaile(e) {
         let id = e.currentTarget.dataset.id;
         wx.navigateTo({
