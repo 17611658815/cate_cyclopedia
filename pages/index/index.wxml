@@ -7,7 +7,7 @@
 </nav>
 
 
-<scroll-view scroll-y="true" style="height:100%;">
+<scroll-view class="animated bounceInDown" scroll-y="true" style="height:100%;">
     <view style="width:100%;height:100%">
         <view class='swipe-wrap'>
             <swiper class="swiper" indicator-dots='true' indicator-color='rgba(255,255, 255, .3)'
@@ -25,7 +25,7 @@
                 </view>
             </view>
         </navigator>
-        <view class='index-slogan'>{{title}}</view>
+        <view class='index-slogan animated bounceInLeft'>{{title}}</view>
         <!-- 瀑布流 -->
         <view style="display:none">
             <image wx:for="{{images}}" wx:key="id" id="{{item.recipe.id}}" src="{{item.recipe.photo}}"
