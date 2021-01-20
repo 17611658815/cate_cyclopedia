@@ -2,7 +2,6 @@
 /* 
     引入全局样式
  */
-@import 'css/global.wxss';
 @import "templates/loading/loading.wxss";
 @import "css/animate.wxss";
 .container{
