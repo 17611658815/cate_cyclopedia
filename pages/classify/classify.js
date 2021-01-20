@@ -6,18 +6,13 @@ Page({
      * 页面的初始数据
      */
     data: {
-        height:0,
-        iphonex:false,
-        classlits:[],
+        classlits: [],
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
         this.loadList()
-        this.setData({
-            height: app.globalData.height,
-        });
         // 在页面中定义插屏广告
         let interstitialAd = null
 
@@ -26,9 +21,9 @@ Page({
             interstitialAd = wx.createInterstitialAd({
                 adUnitId: 'adunit-55fea3ae5546fb3a'
             })
-            interstitialAd.onLoad(() => { })
-            interstitialAd.onError((err) => { })
-            interstitialAd.onClose(() => { })
+            interstitialAd.onLoad(() => {})
+            interstitialAd.onError((err) => {})
+            interstitialAd.onClose(() => {})
         }
 
         // 在适合的场景显示插屏广告
@@ -37,23 +32,23 @@ Page({
                 console.error(err)
             })
         }
-        
+
     },
-    loadList(){
+    loadList() {
         let that = this,
-        param = new Object();
+            param = new Object();
         param.is_weapp = 1,
-        param.weapp_src ='xcf'
+            param.weapp_src = 'xcf'
         app.loadingShow()
         app.net.$Api.getclassList(param).then((res) => {
             app.hideLoading()
             that.setData({
                 classlits: res.data.content
             })
-           
+
         })
     },
-    gocateList(e){
+    gocateList(e) {
         let that = this;
         let q = e.currentTarget.dataset.q;
         wx.navigateTo({

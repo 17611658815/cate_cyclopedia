@@ -10,24 +10,16 @@ Page({
         height:'',
         history:[],
         hotList:[],
-        nvabarData: {
-            showCapsule: 1,
-            title: '寻味美食',
-        },
-        isIphoneX:false
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onShow: function () {
-        let that = this;
-        that.setData({
-            isIphoneX: app.globalData.isIphoneX,
-            height: app.globalData.height,
+        this.setData({
             history: wx.getStorageSync('searchRecord') || [],//若无储存则为空
         })
-        that.hotSearchList()
+        this.hotSearchList()
     },
     //热门搜索
     hotSearchList(){
@@ -36,7 +28,6 @@ Page({
         param.is_weapp = 1,
         param.weapp_src = 'xcf',
         app.net.$Api.getHotListItem(param).then((res) => {
-            console.log(res)
             that.setData({
                 hotList: res.data.content.keywords.slice(0,20)
             })
@@ -55,7 +46,6 @@ Page({
         })
         if (e.detail.value.length > 0) {
             app.net.$Api.searchSelect(param).then((res) => {
-                console.log(res)
                 let searchData = res.data.content.keywords.map(function (res,i) {
                     return {
                         key: e.detail.value,

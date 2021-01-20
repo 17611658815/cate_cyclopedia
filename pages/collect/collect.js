@@ -6,21 +6,16 @@ Page({
      * 页面的初始数据
      */
     data: {
-        height: '',
-        CollectList:[],
-        nvabarData: {
-            showCapsule: 0,
-            title: '收藏',
-        },
+        CollectList: [],
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-       
+
     },
-    delitem(e){
+    delitem(e) {
         let that = this;
         let index = e.currentTarget.dataset.index;
         wx.showModal({
@@ -57,10 +52,8 @@ Page({
         let CollectList = wx.getStorageSync('CollectList') || [];
         console.log(CollectList)
         this.setData({
-            height: app.globalData.height,
             CollectList: CollectList
         })
-        console.log(this.data.CollectList)
     },
 
     /**

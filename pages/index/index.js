@@ -9,18 +9,12 @@ Page({
     data: {
         page: 1,
         height: '',
-        iphonex: false,
         scrollH: 0,
         imgWidth: 0,
         loadingCount: 0,
         images: [],
         col1: [],
         col2: [],
-        // 自定义导航参数
-        nvabarData: {
-            showCapsule: 0,
-            title: '食典录',
-        },
         pullDown: false,
         offset: 0,
         limit: 10,
@@ -52,7 +46,6 @@ Page({
         console.log(this.data.isGoTop,52)
     },
     onShow(){
-        console.log(app.globalData.isIphoneX)
         this.setData({
             title: title[Math.floor(Math.random() * title.length)]
         })
@@ -140,7 +133,6 @@ Page({
                     images[i].recipe.author.id = baseId + "-" + i;
                 }
                 that.setData({
-                    off_on: false,
                     loadingCount: images.length,
                     images: images,
                     page: that.data.page,

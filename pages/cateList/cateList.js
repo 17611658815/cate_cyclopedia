@@ -6,50 +6,43 @@ Page({
      * 页面的初始数据
      */
     data: {
-        height:"",
-        query:'',
-        offset:0,
-        nvabarData: {
-            showCapsule: 1,
-            title: '菜谱列表',
-        },
-        cateList:[],
-        currentTab:0,
-        title:'',
-        off_on:false,
-        contType: ['', '-score','-n_dishes'],
-        scroTop:0,
-        cursor:'',
-        loading:false,
-        isGoTop:false
+        query: '',
+        offset: 0,
+        cateList: [],
+        currentTab: 0,
+        title: '',
+        off_on: false,
+        contType: ['', '-score', '-n_dishes'],
+        scroTop: 0,
+        cursor: '',
+        loading: false,
+        isGoTop: false
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        console.log(options.q)
         let that = this;
         that.setData({
             height: app.globalData.height,
             query: options.q
         });
         that.loadList()
-        
     },
-    switcherTab(e){
+    switcherTab(e) {
         let that = this;
         that.setData({
-            cateList:[],
-            offset:0,
+            cateList: [],
+            offset: 0,
             currentTab: e.currentTarget.dataset.tab,
-        },()=>{
+        }, () => {
             that.loadList()
         })
     },
-    loadList(){
+    loadList() {
         let that = this,
-        param = new Object();
+            param = new Object();
         param.is_weapp = 1;
         param.size = 10
         param.weapp_src = 'xcf';
@@ -62,36 +55,36 @@ Page({
             that.data.cursor = res.data.content.cursor.next
             if (res.data.content.cursor.has_next) {
                 that.setData({
-                    cateList:that.data.cateList.concat(res.data.content.content)
+                    cateList: that.data.cateList.concat(res.data.content.content)
                 })
             } else {
                 that.data.off_on = true;
             }
         })
     },
-        // 点击置顶
-        goTop: function () {
-            wx.pageScrollTo({
-                scrollTop: 0,
-                duration: 300
-            });
+    // 点击置顶
+    goTop: function () {
+        wx.pageScrollTo({
+            scrollTop: 0,
+            duration: 300
+        });
+        this.setData({
+            isGoTop: false
+        });
+    },
+    onPageScroll: function (e) {
+        if (e.scrollTop > 500) {
             this.setData({
-                isGoTop: false
-            });
-        },
-        onPageScroll: function (e) {
-            if (e.scrollTop > 500){
-                this.setData({
-                    isGoTop:true,
-                    scroTop: e.scrollTop
-                })
-            }else{
-                this.setData({
-                    isGoTop: false,
-                    scroTop: e.scrollTop
-                })
-            }
-        },
+                isGoTop: true,
+                scroTop: e.scrollTop
+            })
+        } else {
+            this.setData({
+                isGoTop: false,
+                scroTop: e.scrollTop
+            })
+        }
+    },
     goDetaile(e) {
         let id = e.currentTarget.dataset.id;
         wx.navigateTo({

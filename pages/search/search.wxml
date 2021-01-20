@@ -1,14 +1,18 @@
 <!-- <header-nav navbar-data='{{nvabarData}}'></header-nav> -->
-<nav isBack="{{true}}" seat="{{true}}" backgroundColor='white' titleColor="black" borderColor="black" navTitle="寻味美食"></nav>
+<nav isBack="{{true}}" seat="{{true}}" backgroundColor='white' titleColor="black" borderColor="black" navTitle="寻味美食">
+</nav>
 <view class='search_ctn' catchtap='delSelect'>
     <view class='search_input'>
         <view class='search_input_cnt'>
-            <input type='text' bindinput='inputSearch' bindfocus="inputSearch" bindconfirm='gosearchMsg' data-q='{{inputVal}}' value='{{inputVal}}' placeholder='寻味美食 / 一触及达' placeholder-class='plhclass'></input>
+            <input type='text' bindinput='inputSearch' bindfocus="inputSearch" bindconfirm='gosearchMsg'
+                data-q='{{inputVal}}' value='{{inputVal}}' placeholder='寻味美食 / 一触及达'
+                placeholder-class='plhclass'></input>
             <view bindtap='cancelBack'>取消</view>
         </view>
         <view class='selectContent'>
             <view class='search_input_slect' wx:for="{{searchResultDatas}}" wx:key='item'>
-                <searchHighlightTextView class="result-item" datas='{{searchData[index]}}' catchtap='gosearchMsg' data-val='{{item}}' />
+                <searchHighlightTextView class="result-item" datas='{{searchData[index]}}' catchtap='gosearchMsg'
+                    data-val='{{item}}' />
             </view>
         </view>
         <view class='search_type_title dp' wx:if='{{history.length>0}}'>
@@ -30,5 +34,5 @@
             <ad unit-id="adunit-92a612528aa85dc1" ad-type="video" ad-theme="white"></ad>
         </view>
     </view>
-    
+
 </view>
