@@ -3,9 +3,11 @@
   <view class='nav-wrap' style="background-color:{{backgroundColor}};">
       <view style="height:{{statusBarHeight}}px;"></view>
       <view class='content'>
-        <view class="title" style="line-height:44px;color:{{titleColor}};">{{navTitle}}</view>
-        <view wx:if="{{isBack}}" class='back' bindtap='back'><view class="bord" style="border-color:{{borderColor}}"></view></view>
-        <image wx:if="{{home}}" bindtap="toIndex" class="home"  src="../../images/icon/bar1.png" />
+        <view class="title" style="line-height:44px;color:{{titleColor}}">{{navTitle}}</view>
+        <view wx:if="{{isBack}}" class='back' bindtap='back'>
+			<view class="bord" style="border-color:{{borderColor}}"></view>
+		</view>
+        <image wx:if="{{home}}" bindtap="toIndex" class="home" src="../../images/icon/bar1.png" />
       </view>
   </view>
 </view>

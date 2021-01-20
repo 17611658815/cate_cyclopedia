@@ -66,16 +66,12 @@
         <view class="cate_itemList_text_2">
           <view class="cate_itemList_text_2_content"
             ><text wx:for="{{ item.content.object.ingredient }}" wx:for-item="j"
-              >{{ j.name }},</text
-            ></view
-          >
+              >{{ j.name }},</text></view>
         </view>
       </view>
     </view>
     <template is="loading" data wx:if="{{ loading }}"></template>
-    <view class="reach_bottom" wx:if="{{ off_on && offset > 0 }}"
-      >我是有底线的</view
-    >
+    <view class="reach_bottom" wx:if="{{ off_on && offset > 0 }}">我是有底线的</view>
   </scroll-view>
 </view>
 

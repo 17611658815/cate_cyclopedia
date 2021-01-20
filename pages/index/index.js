@@ -65,7 +65,6 @@ Page({
 				that.loadImages();
 			}
 		})
-
 	},
 	onImageLoad: function (e) {
 		let imageId = e.currentTarget.id;
