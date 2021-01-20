@@ -20,12 +20,12 @@ scroll-view {}
 
 .swipe-wrap {
     width: 100%;
-    height: 240rpx
+    height: 300rpx
 }
 
 .swipe-wrap image {
     width: 100%;
-    height: 240rpx
+    height: 300rpx
 }
 
 .index-serch-box {
