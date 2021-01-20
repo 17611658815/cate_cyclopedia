@@ -10,9 +10,6 @@
   line-height: normal;
   letter-spacing: normal;
 }
-.highlight {
- /* color: #F26B3A; */
-}
 .normal {
   color: #484848;
 }
