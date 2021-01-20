@@ -1,6 +1,3 @@
 {
-    "navigationBarTitleText": "Hello world",
-    "usingComponents": {
-        "header-nav": "../../components/headerNav/headerNav"
-    }    
+    "navigationBarTitleText": "Hello world"
 }

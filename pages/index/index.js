@@ -144,7 +144,6 @@ Page({
 			that.loadImages()
 			console.log('1111')
 		}
-
 	},
 	onReachBottom() {
 		this.onscrollBotm()
@@ -155,7 +154,7 @@ Page({
 			pullDown: true,
 		})
 		wx.vibrateShort()
-		wx.showNavigationBarLoading() //在标题栏中显示加载
+		// wx.showNavigationBarLoading() //在标题栏中显示加载
 
 		setTimeout(function () {
 			wx.hideNavigationBarLoading() //完成停止加载
