@@ -51,17 +51,18 @@ Page({
 	},
 	onLoad: function () {
 		app.globalData.share = false;
+		let that = this;
 		wx.getSystemInfo({
 			success: (res) => {
 				let ww = res.windowWidth,
 					wh = res.windowHeight,
 					imgWidth = ww * 0.48,
 					scrollH = wh;
-				this.setData({
+				that.setData({
 					scrollH: scrollH,
 					imgWidth: imgWidth,
 				});
-				this.loadImages();
+				that.loadImages();
 			}
 		})
 
@@ -167,7 +168,6 @@ Page({
 				col2: []
 			})
 			that.onLoad()
-
 		}, 1500);
 	},
 	goDetaile(e) {

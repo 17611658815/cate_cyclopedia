@@ -3,10 +3,6 @@ const Api = require('API/API.js');
 const updateManager = wx.getUpdateManager();
 App({
     onLaunch: function (options) {
-        console.log(options)
-        // 展示本地存储能力
-        var logs = wx.getStorageSync('logs') || []
-        // 判断是否由分享进入小程序
         if (options.scene == 1007 || options.scene == 1008) {
             this.globalData.share = true
         } else {

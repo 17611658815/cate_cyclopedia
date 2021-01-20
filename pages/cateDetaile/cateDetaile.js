@@ -116,7 +116,6 @@ Page({
 				title: '不可重复添加',
 			})
 		}
-
 		wx.setStorageSync("CollectList", CollectList);
 		console.log(CollectList)
 	},
