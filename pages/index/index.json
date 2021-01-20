@@ -1,7 +1,6 @@
 {
     "enablePullDownRefresh": true,
     "usingComponents": {
-        "nav": "../../components/nav/nav",
-        "waterFallView": "../../components/WaterFallView/WaterFallView"
+        "nav": "../../components/nav/nav"
     }
 }

@@ -1,111 +1,111 @@
 /* pages/cateDetaile/cateDetaile.wxss */
-.cate_thumb{
-    width: 100%;
-    height: 600rpx;
+.cate_thumb {
+  width: 100%;
+  height: 600rpx;
 }
-.cate_title{
-    width: 90%;
-    padding: 40rpx 0;
-    text-align: center;
-    margin: auto;
-    border-bottom: 1rpx solid #e2e2e2;
-    color:#333333;
+.cate_title {
+  width: 90%;
+  padding: 40rpx 0;
+  text-align: center;
+  margin: auto;
+  border-bottom: 1rpx solid #e2e2e2;
+  color: #333333;
 }
-.cate_title_title{
-    font-size: 40rpx;
-    position: relative;
-    color:#333333;
-}
-
-.cate_title_hot{
-    font-size: 25rpx;
-    margin-top: 30rpx;
-}
-.cate_title_hot text{
-    margin-right: 20rpx;
-}
-.cate_title_root{
-    margin-top: 30rpx;
-    font-size: 25rpx;
-    color: #707070;
-}
-.cate_foodmaterial{
-    width: 90%;
-    padding-bottom: 90rpx;
-    margin: auto;
-}
-.cate_fmt_title{
-    width: 100%;
-    margin:40rpx 0;
-    position: relative;
-}
-.cate_fmt_title_txt{
-     font-size: 36rpx;
-    font-weight: 600;
-}
-.cate_fmt_item{
-    display: flex;
-}
-.cate_fmt_item view{
-    flex: 1;
-    font-size: 30rpx;
-    padding: 20rpx 0;
-    border-bottom: 1rpx solid #e2e2e2;
-}
-.orange{
-   color: #F26B3A;
-}
-.black{
-    color: #333333;
-}
-.cate_fmt_step_txt{
-    padding: 30rpx 0;
-    font-size: 36rpx;
-    font-weight: 600;
-    color: #333333;
-}
-.cate_fmt_step image{
-    width: 100%;
-    border-radius: 10rpx;
-}
-.cate_fmt_step_textmsg{
-    width: 100%;
-    padding: 20rpx 0;
-    font-size: 30rpx;
-    line-height: 2;
-    border-bottom: 1rpx solid #e2e2e2;
-    color: #333333;
-}
-.cateDetaile_share{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 36rpx;
-    color: #707070;
-    text-align: center;
-    font-weight: 500;
+.cate_title_title {
+  font-size: 40rpx;
+  position: relative;
+  color: #333333;
 }
 
-.cateDetaile_share image{
-    width: 50rpx;
-    height: 50rpx;
-    vertical-align: middle;
+.cate_title_hot {
+  font-size: 25rpx;
+  margin-top: 30rpx;
+}
+.cate_title_hot text {
+  margin-right: 20rpx;
+}
+.cate_title_root {
+  margin-top: 30rpx;
+  font-size: 25rpx;
+  color: #707070;
+}
+.cate_foodmaterial {
+  width: 90%;
+  padding-bottom: 90rpx;
+  margin: auto;
+}
+.cate_fmt_title {
+  width: 100%;
+  margin: 40rpx 0;
+  position: relative;
+}
+.cate_fmt_title_txt {
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.cate_fmt_item {
+  display: flex;
+}
+.cate_fmt_item view {
+  flex: 1;
+  font-size: 30rpx;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #e2e2e2;
+}
+.orange {
+  color: #f26b3a;
+}
+.black {
+  color: #333333;
+}
+.cate_fmt_step_txt {
+  padding: 30rpx 0;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #333333;
+}
+.cate_fmt_step image {
+  width: 100%;
+  border-radius: 10rpx;
+}
+.cate_fmt_step_textmsg {
+  width: 100%;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+  line-height: 2;
+  border-bottom: 1rpx solid #e2e2e2;
+  color: #333333;
+}
+.cateDetaile_share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 36rpx;
+  color: #707070;
+  text-align: center;
+  font-weight: 500;
 }
 
-.collectBox{
-    width: 120rpx;
-    height: 120rpx;
-    background: #EE5E7B;
-    position: fixed;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.cateDetaile_share image {
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
 }
-.collectBox image{
-    width: 50rpx;
-    height: 50rpx;
+
+.collectBox {
+  width: 120rpx;
+  height: 120rpx;
+  background: #ee5e7b;
+  position: fixed;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.collectBox image {
+  width: 50rpx;
+  height: 50rpx;
 }

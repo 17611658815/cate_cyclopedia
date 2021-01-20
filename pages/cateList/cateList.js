@@ -10,7 +10,6 @@ Page({
         offset: 0,
         cateList: [],
         currentTab: 0,
-        title: '',
         off_on: false,
         contType: ['', '-score', '-n_dishes'],
         scroTop: 0,
@@ -25,7 +24,6 @@ Page({
     onLoad: function (options) {
         let that = this;
         that.setData({
-            height: app.globalData.height,
             query: options.q
         });
         that.loadList()
@@ -90,7 +88,6 @@ Page({
         wx.navigateTo({
             url: '/pages/cateDetaile/cateDetaile?id=' + id,
         })
-        console.log(e)
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

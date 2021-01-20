@@ -1,39 +1,88 @@
 <import src="../../templates/loading/loading.wxml"></import>
-<nav isBack="{{true}}" seat="{{true}}" backgroundColor='white' titleColor="black" borderColor="black"
-    navTitle="{{query}}"></nav>
-<view class='cateList_containter'>
-    <view class='cate_sot_options {{scroTop>30 ? "cate_sot_options_none":"cate_sot_options_show"}}'>
-        <view bindtap='switcherTab' data-tab='0' class='{{currentTab==0 ? "strong":"color"}}'>综合</view>
-        <view bindtap='switcherTab' data-tab='1' class='{{currentTab==1 ? "strong":"color"}}'
-            style='text-align: center;'>评分最高</view>
-        <view bindtap='switcherTab' data-tab='2' class='{{currentTab==2 ? "strong":"color"}}'
-            style='text-align: right;'>做过最多</view>
-    </view>
-    <!-- <view class='cate_sot_options'></view> -->
-    <scroll-view style='height:100%'>
-        <view class='cate_itemList' wx:for="{{cateList}}" wx:key='key' data-id='{{item.content.object.id}}'
-            bindtap='goDetaile'
-            wx:if="{{item.style!='equipment_binding_tips_item' && item.style!='search_artical_ad_collection'}}">
-            <ad unit-id="adunit-e565947e04a88860" ad-type="video" wx:if='{{index==1}}' ad-theme="white"></ad>
-            <image class='cate_itemList_image' mode="aspectFill" lazy-load='true'
-                src='{{item.content.object.photo640}}'></image>
-            <view class='cate_itemList_text'>
-                <view class='cate_itemList_text_1'>{{item.content.object.name}}<text
-                        wx:if="{{item.content.object.score!=''}}"
-                        style="margin-left:20rpx;color:#F26B3A;font-weight:500">{{item.content.object.score}}分</text>
-                </view>
-                <view class='cate_itemList_text_2'>
-                    <view class='cate_itemList_text_2_content'><text wx:for="{{item.content.object.ingredient}}"
-                            wx:for-item="j">{{j.name}},</text></view>
-                </view>
-            </view>
+<nav
+  isBack="{{ true }}"
+  seat="{{ true }}"
+  backgroundColor="white"
+  titleColor="black"
+  borderColor="black"
+  navTitle="{{ query }}"
+></nav>
+<view class="cateList_containter">
+  <view
+    class="cate_sot_options {{scroTop > 30 ? 'cate_sot_options_none' : 'cate_sot_options_show' }}"
+  >
+    <view
+      bindtap="switcherTab"
+      data-tab="0"
+      class="{{ currentTab == 0 ? 'strong' : 'color' }}"
+      >综合</view
+    >
+    <view
+      bindtap="switcherTab"
+      data-tab="1"
+      class="{{ currentTab == 1 ? 'strong' : 'color' }}"
+      style="text-align: center"
+      >评分最高</view
+    >
+    <view
+      bindtap="switcherTab"
+      data-tab="2"
+      class="{{ currentTab == 2 ? 'strong' : 'color' }}"
+      style="text-align: right"
+      >做过最多</view
+    >
+  </view>
+  <!-- <view class='cate_sot_options'></view> -->
+  <scroll-view style="height: 100%">
+    <view
+      class="cate_itemList"
+      wx:for="{{ cateList }}"
+      wx:key="key"
+      data-id="{{ item.content.object.id }}"
+      bindtap="goDetaile"
+      wx:if="{{ item.style != 'equipment_binding_tips_item' && item.style != 'search_artical_ad_collection'}}"
+    >
+      <ad
+        unit-id="adunit-e565947e04a88860"
+        ad-type="video"
+        wx:if="{{ index == 1 }}"
+        ad-theme="white"
+      ></ad>
+      <image
+        class="cate_itemList_image"
+        mode="aspectFill"
+        lazy-load="true"
+        src="{{ item.content.object.photo640 }}"
+      ></image>
+      <view class="cate_itemList_text">
+        <view class="cate_itemList_text_1"
+          >{{ item.content.object.name
+          }}<text
+            wx:if="{{ item.content.object.score != '' }}"
+            style="margin-left: 20rpx; color: #f26b3a; font-weight: 500"
+            >{{ item.content.object.score }}分</text
+          >
         </view>
-        <template is="loading" data wx:if='{{loading}}'></template>
-        <view class='reach_bottom' wx:if='{{off_on && offset>0}}'>我是有底线的</view>
-    </scroll-view>
+        <view class="cate_itemList_text_2">
+          <view class="cate_itemList_text_2_content"
+            ><text wx:for="{{ item.content.object.ingredient }}" wx:for-item="j"
+              >{{ j.name }},</text
+            ></view
+          >
+        </view>
+      </view>
+    </view>
+    <template is="loading" data wx:if="{{ loading }}"></template>
+    <view class="reach_bottom" wx:if="{{ off_on && offset > 0 }}"
+      >我是有底线的</view
+    >
+  </scroll-view>
 </view>
 
 <!-- 返回顶部 -->
-<view class="goTopBox {{isGoTop == true ? 'transform1':'transform2'}}" bindtap="goTop">
-    <image src="../../images/icon/goTop.png"></image>
+<view
+  class="goTopBox {{ isGoTop == true ? 'transform1' : 'transform2' }}"
+  bindtap="goTop"
+>
+  <image src="../../images/icon/goTop.png"></image>
 </view>

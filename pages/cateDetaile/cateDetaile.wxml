@@ -1,49 +1,73 @@
 <!-- <header-nav navbar-data='{{nvabarData}}'></header-nav> -->
 
-<nav isBack="{{true}}" home='{{true}}' seat="{{false}}" titleColor="white" borderColor="white"></nav>
-    <view class='cateDetaile_header'>
-        <image mode="aspectFill" class='cate_thumb' src="{{detaileObj.photo}}"></image>
-        <view class='cate_title'>
-            <view class='cate_title_title'>{{detaileObj.name}}</view>
-            <view class='cate_title_hot'>
-                <text>{{detaileObj.score}}综合评分</text>
-                <text>{{detaileObj.stats.n_cooked_last_week}}人最近7天做过</text>
-            </view>
-            <view class='cate_title_root'>本平台数据均来自www.xiachufang.com</view>
-        </view>
-       
-        <view class='cate_foodmaterial'>
-             <ad unit-id="adunit-394e8d00043446e1" style='margin-bottom:20rpx;'></ad>
-            <view class='cate_fmt_title'>
-                <view class='cate_fmt_title_txt'>用料</view>
-                <!-- <view class='cateDetaile_share'>
+<nav
+  isBack="{{ true }}"
+  home="{{ true }}"
+  seat="{{ false }}"
+  titleColor="white"
+  borderColor="white"
+></nav>
+<view class="cateDetaile_header">
+  <image
+    mode="aspectFill"
+    class="cate_thumb"
+    src="{{ detaileObj.photo }}"
+  ></image>
+  <view class="cate_title">
+    <view class="cate_title_title">{{ detaileObj.name }}</view>
+    <view class="cate_title_hot">
+      <text>{{ detaileObj.score }}综合评分</text>
+      <text>{{ detaileObj.stats.n_cooked_last_week }}人最近7天做过</text>
+    </view>
+    <view class="cate_title_root">本平台数据均来自www.xiachufang.com</view>
+  </view>
+
+  <view class="cate_foodmaterial">
+    <ad unit-id="adunit-394e8d00043446e1" style="margin-bottom: 20rpx"></ad>
+    <view class="cate_fmt_title">
+      <view class="cate_fmt_title_txt">用料</view>
+      <!-- <view class='cateDetaile_share'>
                     <image src='../../images/wx.png'></image>
                     <view>
                         分享
                     </view>
                 </view> -->
-            </view>
-            <view class='cate_fmt_item' wx:for='{{detaileObj.ingredient}}' wx:for-item="j" wx:key="j">
-                <view>{{j.name}}</view>
-                <view>{{j.amount}}</view>
-            </view>
-            
-            <view class='cate_fmt_step' wx:for="{{detaileObj.instruction}}" wx:for-item="k" wx:key="k">
-                <view class='cate_fmt_step_txt'>
-                    步骤{{index+1}}
-                </view>
-                <image wx:if='{{k.url!=""}}' lazy-load='true' mode='aspectFill' src='{{k.url}}'></image>
-                <view class='cate_fmt_step_textmsg'>{{k.text}}</view>
-            </view>
-        </view>
+    </view>
+    <view
+      class="cate_fmt_item"
+      wx:for="{{ detaileObj.ingredient }}"
+      wx:for-item="j"
+      wx:key="j"
+    >
+      <view>{{ j.name }}</view>
+      <view>{{ j.amount }}</view>
     </view>
 
+    <view
+      class="cate_fmt_step"
+      wx:for="{{ detaileObj.instruction }}"
+      wx:for-item="k"
+      wx:key="k"
+    >
+      <view class="cate_fmt_step_txt"> 步骤{{ index + 1 }} </view>
+      <image
+        wx:if="{{ k.url != '' }}"
+        lazy-load="true"
+        mode="aspectFill"
+        src="{{ k.url }}"
+      ></image>
+      <view class="cate_fmt_step_textmsg">{{ k.text }}</view>
+    </view>
+  </view>
+</view>
 
-<view class='collectBox' 
-    bindtap='addCollect' 
-    wx:if="{{write[0]+write[1] > 0}}" 
-    bindtouchmove="touchmove" 
-    catch:touchmove 
-    style="left:{{write[0]}}px;top:{{write[1]}}px;">
-    <image src='../../images/icon/addcollect.png'></image>
+<view
+  class="collectBox"
+  bindtap="addCollect"
+  wx:if="{{ write[0] + write[1] > 0 }}"
+  bindtouchmove="touchmove"
+  catch:touchmove
+  style="left:{{ write[0] }}px;top:{{ write[1] }}px;"
+>
+  <image src="../../images/icon/addcollect.png"></image>
 </view>
