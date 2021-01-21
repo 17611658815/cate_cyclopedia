@@ -94,7 +94,6 @@ Page({
 			name: detaileObj.name,
 			id: detaileObj.id,
 			image: detaileObj.photo,
-
 		}
 		CollectList.forEach((val) => {
 			console.log(val.name.indexOf(itemArr.name))

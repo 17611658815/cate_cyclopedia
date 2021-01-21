@@ -142,7 +142,6 @@ Page({
 				offset: that.data.offset += 20,
 			})
 			that.loadImages()
-			console.log('1111')
 		}
 	},
 	onReachBottom() {
