@@ -111,7 +111,7 @@ Page({
 		let that = this,
 			images = [],
 			param = new Object();
-		param.offset = that.data.offset,
+		   param.offset = that.data.offset,
 			param.limit = that.data.limit,
 			param.is_weapp = that.data.is_weapp;
 		app.net.$Api.getHomeList(param).then((res) => {

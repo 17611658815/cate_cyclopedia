@@ -37,7 +37,7 @@ Page({
 	loadList() {
 		let that = this,
 			param = new Object();
-		param.is_weapp = 1,
+		    param.is_weapp = 1,
 			param.weapp_src = 'xcf'
 		app.loadingShow()
 		app.net.$Api.getclassList(param).then((res) => {

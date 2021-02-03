@@ -41,9 +41,9 @@
 }
 
 .home {
-    width: 70rpx;
-    height: 70rpx;
+    width: 65rpx;
+    height: 65rpx;
     position: absolute;
     left: 70rpx;
-    top: 15rpx;
+    top: 16rpx;
 }

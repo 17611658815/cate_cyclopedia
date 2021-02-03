@@ -24,12 +24,6 @@
     <ad unit-id="adunit-394e8d00043446e1" style="margin-bottom: 20rpx"></ad>
     <view class="cate_fmt_title">
       <view class="cate_fmt_title_txt">用料</view>
-      <!-- <view class='cateDetaile_share'>
-                    <image src='../../images/wx.png'></image>
-                    <view>
-                        分享
-                    </view>
-                </view> -->
     </view>
     <view
       class="cate_fmt_item"
