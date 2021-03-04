@@ -3,7 +3,6 @@ const images = require('../../utils/images.js')
 const title = require('../../utils/title.js')
 const app = getApp()
 Page({
-	// 新增代码666666666666666666666666666
 
     /**
      * 页面的初始数据
