@@ -21,7 +21,10 @@ Page({
 		loading: false,
 		title: "",
 		isGoTop: false,
-		off_on: false
+		off_on: false,
+		u8ad: { adData: {}, ad: { banner: "banner"} },
+		adlist:[]
+		
 	},
 	// 点击置顶
 	goTop: function () {

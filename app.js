@@ -1,8 +1,10 @@
 //app.js
 const Api = require('API/API.js');
 const updateManager = wx.getUpdateManager();
+const u8ad = require('./utils/u8ad_sdk.min.js');
 App({
     onLaunch: function (options) {
+        this.globalData.capsule = wx.getMenuButtonBoundingClientRect() //获取胶囊宽高及位置
         if (options.scene == 1007 || options.scene == 1008) {
             this.globalData.share = true
         } else {
@@ -10,6 +12,7 @@ App({
         };
         wx.getSystemInfo({
             success: (res) => {
+                this.globalData.windowWidth = res.windowWidth
                 this.globalData.statusBarHeight = res.statusBarHeight
                 this.globalData.navBarHeight = 44 + res.statusBarHeight
             }, fail(err) {
@@ -51,7 +54,8 @@ App({
         userInfo: null,
         share: false,  // 分享默认为false
         navBarHeight:'',
-        statusBarHeight:''
+        statusBarHeight: 0,
+        screenHeight: 0,
     },
     loadingShow() {
         wx.showLoading({
