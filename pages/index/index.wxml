@@ -30,8 +30,7 @@
       <image wx:for="{{ images }}" wx:key="id" id="{{ item.recipe.id }}" src="{{ item.recipe.photo }}" bindload="onImageLoad" lazy-load='true'></image>
     </view>
     <view class="img_container">
-      <ad unit-id="adunit-5303aec78cea5c4d" ad-type="grid" grid-opacity="0.8" grid-count="5" ad-theme="white">
-      </ad>
+      <ad-custom unit-id="adunit-20d4c6b8cca75e61"></ad-custom>
       <view class="img_item">
         <view wx:for="{{ col1 }}" wx:key="id" class="img_item_box" data-id="{{ item.recipe.id }}" bindtap="goDetaile">
           <image lazy-load='true' class="index_img_item" src="{{ item.recipe.photo }}" lazy-load='true' style="width:100%;height:{{ item.height }}px;max-height: 180px;" mode="aspectFill"></image>

@@ -42,12 +42,7 @@
       bindtap="goDetaile"
       wx:if="{{ item.style != 'equipment_binding_tips_item' && item.style != 'search_artical_ad_collection'}}"
     >
-      <ad
-        unit-id="adunit-e565947e04a88860"
-        ad-type="video"
-        wx:if="{{ index == 1 }}"
-        ad-theme="white"
-      ></ad>
+    <ad-custom unit-id="adunit-c58693871de41644" wx:if="{{ index == 1 ||  index == 3 || index == 7 || index == 11}}" style="margin-bottom: 40rpx;"></ad-custom>
       <image
         class="cate_itemList_image"
         mode="aspectFill"
