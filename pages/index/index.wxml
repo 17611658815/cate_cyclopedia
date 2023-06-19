@@ -77,5 +77,3 @@
   <image src="../../images/icon/goTop.png"></image>
 </view>
 
-
-<!-- <view class="u8_banner" style="background: #fffff;color:#333;"> <u8-ad data-id="{{u8ad.ad.banner}}" adData="{{u8ad.adData}}" bindadload="u8adLoad" bindclick="u8adClick" bindclose="u8adClose" class="u8_component"></u8-ad> </view> -->

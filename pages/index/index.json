@@ -1,7 +1,6 @@
 {
     "enablePullDownRefresh": true,
     "usingComponents": {
-        "nav": "../../components/nav/nav",
-        "u8-ad": "/components/u8AD/u8AD" 
+        "nav": "../../components/nav/nav"
     }
 }

@@ -22,7 +22,6 @@ Page({
 		title: "",
 		isGoTop: false,
 		off_on: false,
-		u8ad: { adData: {}, ad: { banner: "banner"} },
 		adlist:[]
 		
 	},

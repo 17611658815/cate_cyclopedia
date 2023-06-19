@@ -1,7 +1,6 @@
 //app.js
 const Api = require('API/API.js');
 const updateManager = wx.getUpdateManager();
-const u8ad = require('./utils/u8ad_sdk.min.js');
 App({
     onLaunch: function (options) {
         this.globalData.capsule = wx.getMenuButtonBoundingClientRect() //获取胶囊宽高及位置
