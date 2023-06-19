@@ -1,38 +1,25 @@
 <import src="../../templates/loading/loading.wxml"></import>
-<nav
-  isBack="{{ false }}"
-  seat="{{ true }}"
-  backgroundColor="white"
-  titleColor="black"
-  borderColor="white"
-  navTitle="食典"
-></nav>
+<nav isBack="{{ false }}" seat="{{ true }}" backgroundColor="white" titleColor="black" borderColor="white" navTitle="食典"></nav>
 
-<view  class="animated bounceInDown" scroll-y="true" style="height: 100%">
+<view class="animated bounceInDown" scroll-y="true" style="height: 100%">
   <view style="width: 100%; height: 100%">
     <view class="swipe-wrap">
-      <swiper
-        class="swiper"
-        indicator-dots="true"
-        indicator-color="rgba(255,255, 255, .3)"
-        indicator-active-color="#ffffff"
-        autoplay
-        circular="true"
-        interval="5000"
-        duration="500"
-      >
+      <swiper class="swiper" indicator-dots="true" indicator-color="rgba(255,255, 255, .3)" indicator-active-color="#ffffff" autoplay circular="true" interval="5000" duration="500">
         <swiper-item bindtap="goFlow" data-type="flow4">
-          <image mode="aspectFill" src="../../images/img/b1.jpg"></image>
+          <image src="../../images/img/b1.jpg"></image>
+        </swiper-item>
+        <swiper-item bindtap="goFlow" data-type="flow4">
+          <image src="../../images/img/b2.jpg"></image>
+        </swiper-item>
+        <swiper-item bindtap="goFlow" data-type="flow4">
+          <image src="../../images/img/b3.jpg"></image>
         </swiper-item>
       </swiper>
     </view>
     <navigator url="/pages/search/search">
       <view class="index-serch-box">
         <view class="index-serch-con">
-          <image
-            class="index-serch-link-icon"
-            src="../../images/icon/icon-serch.png"
-          ></image>
+          <image class="index-serch-link-icon" src="../../images/icon/icon-serch.png"></image>
           <text class="index-serch-link-text">今天想吃点什么</text>
         </view>
       </view>
@@ -40,56 +27,22 @@
     <view class="index-slogan animated bounceInLeft">{{ title }}</view>
     <!-- 瀑布流 -->
     <view style="display: none">
-      <image
-        wx:for="{{ images }}"
-        wx:key="id"
-        id="{{ item.recipe.id }}"
-        src="{{ item.recipe.photo }}"
-        bindload="onImageLoad"
-        lazy-load='true'
-      ></image>
+      <image wx:for="{{ images }}" wx:key="id" id="{{ item.recipe.id }}" src="{{ item.recipe.photo }}" bindload="onImageLoad" lazy-load='true'></image>
     </view>
     <view class="img_container">
-      <ad
-        unit-id="adunit-5303aec78cea5c4d"
-        ad-type="grid"
-        grid-opacity="0.8"
-        grid-count="5"
-        ad-theme="white"
-      >
+      <ad unit-id="adunit-5303aec78cea5c4d" ad-type="grid" grid-opacity="0.8" grid-count="5" ad-theme="white">
       </ad>
-      <!-- <view class="u8_banner" style="background: #fffff;color:#333;"> <u8-ad data-id="{{u8ad.ad.banner}}" adData="{{u8ad.adData}}" bindadload="u8adLoad" bindclick="u8adClick" bindclose="u8adClose" class="u8_component"></u8-ad> </view> -->
       <view class="img_item">
-        <view
-          wx:for="{{ col1 }}"
-          wx:key="id"
-          class="img_item_box"
-          data-id="{{ item.recipe.id }}"
-          bindtap="goDetaile"
-        >
-          <image
-            lazy-load='true'
-            class="index_img_item"
-            src="{{ item.recipe.photo }}"
-            style="width:100%;;height:{{ item.height }}px;"
-          ></image>
+        <view wx:for="{{ col1 }}" wx:key="id" class="img_item_box" data-id="{{ item.recipe.id }}" bindtap="goDetaile">
+          <image lazy-load='true' class="index_img_item" src="{{ item.recipe.photo }}" lazy-load='true' style="width:100%;height:{{ item.height }}px;max-height: 180px;" mode="aspectFill"></image>
           <view class="index_img_title">
             <view class="index_img_title_item">{{ item.recipe.name }}</view>
             <view class="index_img_title_mark">
               <view wx:if="{{ item.recipe.author.name != '' }}">
-                <image
-                lazy-load='true'
-                  class="mark radious"
-                  src="{{ item.recipe.author.photo }}"
-                ></image
-                ><text class="author_name">{{ item.recipe.author.name }}</text>
+                <image lazy-load='true' class="mark radious" src="{{ item.recipe.author.photo }}"></image><text class="author_name">{{ item.recipe.author.name }}</text>
               </view>
               <view wx:if="{{ item.recipe.stats.n_cooked > 0 }}">
-                <image
-                lazy-load='true'
-                  class="mark"
-                  src="../../images/icon/icon-pingfen.png"
-                ></image>
+                <image lazy-load='true' class="mark" src="../../images/icon/icon-pingfen.png"></image>
                 {{ item.recipe.stats.n_cooked }}
               </view>
             </view>
@@ -97,36 +50,16 @@
         </view>
       </view>
       <view class="img_item">
-        <view
-          wx:for="{{ col2 }}"
-          wx:key="id"
-          class="img_item_box"
-          data-id="{{ item.recipe.id }}"
-          bindtap="goDetaile"
-        >
-          <image
-            lazy-load='true'
-            class="index_img_item"
-            src="{{ item.recipe.photo }}"
-            style="width:100%;;height:{{ item.height }}px"
-          ></image>
+        <view wx:for="{{ col2 }}" wx:key="id" class="img_item_box" data-id="{{ item.recipe.id }}" bindtap="goDetaile">
+          <image lazy-load='true' class="index_img_item" src="{{ item.recipe.photo }}" lazy-load='true' style="width:100%;;height:{{ item.height }}px;max-height: 180px" mode="aspectFill"></image>
           <view class="index_img_title">
             <view class="index_img_title_item">{{ item.recipe.name }}</view>
             <view class="index_img_title_mark">
               <view wx:if="{{ item.recipe.author.name != '' }}">
-                <image
-                  class="mark radious"
-                  lazy-load='true'
-                  src="{{ item.recipe.author.photo }}"
-                ></image
-                ><text class="author_name">{{ item.recipe.author.name }}</text>
+                <image class="mark radious" lazy-load='true' src="{{ item.recipe.author.photo }}"></image><text class="author_name">{{ item.recipe.author.name }}</text>
               </view>
               <view wx:if="{{ item.recipe.stats.n_cooked > 0 }}">
-                <image
-                  class="mark"
-                  lazy-load='true'
-                  src="../../images/icon/icon-pingfen.png"
-                ></image>
+                <image class="mark" lazy-load='true' src="../../images/icon/icon-pingfen.png"></image>
                 {{ item.recipe.stats.n_cooked }}
               </view>
             </view>
@@ -137,13 +70,10 @@
     <template is="loading" data wx:if="{{ !off_on }}"></template>
     <view class="reach_bottom" wx:if="{{ off_on }}">我是有底线的</view>
   </view>
-</view >
+</view>
 
 <!-- 返回顶部 -->
-<view
-  class="goTopBox {{ isGoTop == true ? 'transform1' : 'transform2' }}"
-  bindtap="goTop"
->
+<view class="goTopBox {{ isGoTop == true ? 'transform1' : 'transform2' }}" bindtap="goTop">
   <image src="../../images/icon/goTop.png"></image>
 </view>
 
