@@ -8,7 +8,7 @@
   navTitle="食典"
 ></nav>
 
-<scroll-view class="animated bounceInDown" scroll-y="true" style="height: 100%">
+<view  class="animated bounceInDown" scroll-y="true" style="height: 100%">
   <view style="width: 100%; height: 100%">
     <view class="swipe-wrap">
       <swiper
@@ -46,6 +46,7 @@
         id="{{ item.recipe.id }}"
         src="{{ item.recipe.photo }}"
         bindload="onImageLoad"
+        lazy-load='true'
       ></image>
     </view>
     <view class="img_container">
@@ -67,7 +68,7 @@
           bindtap="goDetaile"
         >
           <image
-            mode="widthFix"
+            lazy-load='true'
             class="index_img_item"
             src="{{ item.recipe.photo }}"
             style="width:100%;;height:{{ item.height }}px;"
@@ -77,6 +78,7 @@
             <view class="index_img_title_mark">
               <view wx:if="{{ item.recipe.author.name != '' }}">
                 <image
+                lazy-load='true'
                   class="mark radious"
                   src="{{ item.recipe.author.photo }}"
                 ></image
@@ -84,6 +86,7 @@
               </view>
               <view wx:if="{{ item.recipe.stats.n_cooked > 0 }}">
                 <image
+                lazy-load='true'
                   class="mark"
                   src="../../images/icon/icon-pingfen.png"
                 ></image>
@@ -102,7 +105,7 @@
           bindtap="goDetaile"
         >
           <image
-            mode="widthFix"
+            lazy-load='true'
             class="index_img_item"
             src="{{ item.recipe.photo }}"
             style="width:100%;;height:{{ item.height }}px"
@@ -113,6 +116,7 @@
               <view wx:if="{{ item.recipe.author.name != '' }}">
                 <image
                   class="mark radious"
+                  lazy-load='true'
                   src="{{ item.recipe.author.photo }}"
                 ></image
                 ><text class="author_name">{{ item.recipe.author.name }}</text>
@@ -120,6 +124,7 @@
               <view wx:if="{{ item.recipe.stats.n_cooked > 0 }}">
                 <image
                   class="mark"
+                  lazy-load='true'
                   src="../../images/icon/icon-pingfen.png"
                 ></image>
                 {{ item.recipe.stats.n_cooked }}
@@ -132,7 +137,7 @@
     <template is="loading" data wx:if="{{ !off_on }}"></template>
     <view class="reach_bottom" wx:if="{{ off_on }}">我是有底线的</view>
   </view>
-</scroll-view>
+</view >
 
 <!-- 返回顶部 -->
 <view

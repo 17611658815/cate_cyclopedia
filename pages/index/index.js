@@ -128,8 +128,8 @@ Page({
 				}
 				that.setData({
 					loadingCount: images.length,
-					images: images,
-					page: that.data.page,
+          page: that.data.page,
+          images: images
 				})
 			} else {
 				that.setData({
