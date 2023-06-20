@@ -28,7 +28,7 @@
     </view>
   </view>
   <view class="none_box" wx:else>
-    <image src="../../images/icon/none.png"></image>
+    <image mode="aspectFill" src="../../images/icon/nothing.png"></image>
     <view>还没有收藏任何作品哦</view>
   </view>
 </view>

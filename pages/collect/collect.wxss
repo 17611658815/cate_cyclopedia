@@ -61,8 +61,8 @@
   align-items: center;
 }
 .none_box image {
-  width: 306rpx;
-  height: 200rpx;
+  width: 300rpx;
+  height: 300rpx;
   margin-top: 200rpx;
 }
 .none_box view {
