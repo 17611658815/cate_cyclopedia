@@ -18,7 +18,7 @@
 }
 
 .cate_title_hot {
-  font-size: 25rpx;
+  font-size: 32rpx;
   margin-top: 30rpx;
 }
 .cate_title_hot text {

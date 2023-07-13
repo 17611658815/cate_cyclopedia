@@ -22,7 +22,8 @@ Page({
 		title: "",
 		isGoTop: false,
 		off_on: false,
-		adlist:[]
+    adlist:[],
+    animationType:'animated fadeInUp'
 		
 	},
 	// 点击置顶
@@ -182,5 +183,11 @@ Page({
 			title: "今天想吃点什么？",
 			path: '/pages/index/index',
 		}
-	},
+  },
+  // 监听动画结束切换新的动画
+  // onbindanimationend(e){
+  //   this.setData({
+  //     animationType:'animated flipInY'
+  //   })
+  // }
 })

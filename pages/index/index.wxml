@@ -75,4 +75,7 @@
 <view class="goTopBox {{ isGoTop == true ? 'transform1' : 'transform2' }}" bindtap="goTop">
   <image src="../../images/icon/goTop.png"></image>
 </view>
+<!-- <view class="goTopBox {{animationType}}" bindanimationend='onbindanimationend' bindtap="goTop">
+  <image src="../../images/icon/goTop.png"></image>
+</view> -->
 
